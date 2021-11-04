@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeTec - Simulador</title>
+    <link rel="stylesheet" href="css/Simulador.css">
+    <link rel="shortcut icon" href="imagens/favicon.png">
+</head>
+
+<body id="body_simulador">
+
+    <div class="header">
+        <div class="conteiner">
+            <img id="logo" src="imagens/logo.png" alt="logo da marca">
+            <div class="conteiner_02">
+                <h1>SafeTec</h1>
+                <h2>DYNAMICS</h2>
+            </div>
+            <ul class="navbar">
+                <li><a href="Index.html">Menu</a></li>
+                <li><a class="active" href="">Simulação</a></li>
+                <li>|</li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="centro">
+        <div class="body_simulador"></div>
+
+        <div class="letra">
+            <div id="div_simule">
+                <h1 id="simule">SIMULE AQUI!</h1><br>
+
+                <b> Para realizarmos os cálculos, será requisitado alguns valores.</b>
+
+                <br>
+                <br>
+                <br>
+                <div class="half_box spacing">
+                    <label for="lbl_qtd">Quantidade de Func.</label>
+                    <input id="qtd_func" type="text"
+                        placeholder="Digite a quantidade de funcionarios que trabalha no setor.">
+                </div>
+
+                <div class="half_box spacing">
+                    <label for="lbl_seg">Seguro Mensal</label>
+                    <input id="val_seg" type="text" placeholder="Digite quanto é pago de seguro mensal ao funcionario.">
+                </div>
+
+                <div class="half_box spacing">
+                    <label for="lbl_sal">Sálario por pessoa</label>
+                    <input id="val_sal" type="text"
+                        placeholder="Digite o salario oferecido atualmente aos funcionarios.">
+                </div>
+
+                <div class="half_box spacing">
+                    <label for="lbl_func-doent">Funcionários doentes</label>
+                    <input id="func_doent" type="text" placeholder="Digite quantos funcionarios ficaram doentes.">
+                </div>
+
+                <div class="half_box spacing">
+                    <label for="lbl_ganhos">Ganhos da empresa</label>
+                    <input id="ganhos" type="text" placeholder="Digite os ganhos da sua empresa mensalmente">
+                </div>
+
+                <br><br><br>
+
+                <button id="botoes" class="botao_simulador" onclick="but_calc()">Calcular</button>
+                <button id="botoes" onclick="simular_covid()">Simular Covid-19</button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="centro">
+        <div id="div_preencher"><b id="b_títulos">SIMULAÇÃO</b> <br><br><b> O valor ganho mensalmente equivale a <span
+                    id="span_valores7" class="span_valores"></span> <br><br> Com <span
+                    id="span_valores8" class="span_valores"></span> funcionários doentes, há uma perda de <span
+                    id="span_valores9" class="span_valores"></span> na produtividade,<br><br> o
+                prejuízo
+                em valor bruto será de <span id="span_valores10" class="span_valores"></span>
+                <br><br>
+                O valor gasto com seguro concorrente anualmente <span id="span_valores11"
+                    class="span_valores"></span> sem sistema de <b>Detecção de Temperatura</b></b>
+
+        </div>
+    </div>
+
+
+    <div class="centro">
+        <div id="div_preencher2"> <b id="b_títulos">SIMULAÇÃO COVID-19</b>
+            <br><br>
+           <b>O valor ganho mensalmente equivale a <span id="span_valores1" class="span_valores"> </span> devido á
+            perda
+            do lote
+            <br><br>
+            Com <span id="span_valores2" class="span_valores"></span> funcionários doentes, há uma perda de 100% na
+            produtividade, pois será necessário uma averiguação para saber quantos funcionários mais estão infectados, e quantos lotes estão sob riscos
+            <br><br>
+            o prejuizo em valor bruto sera de, em média <span id="span_valores3" class="span_valores"></span>.
+            <br><br>
+            valor gasto com seguro concorrente anualmente <span id="span_valores4" class="span_valores"></span> sem
+            sistema de <b>Detecção de Temperatura<b></b> 
+
+                    <br><br>
+
+                    <b id="b_títulos">BÔNUS 1</b>
+                    <br><br>
+                    Um dos funcionários abriu um processo contra sua empresa o acusando de Insalubridade, a
+                    multa
+                    tende a ser 50 á 500 vezes o valor do salário mínimo pago, o que pode custar em torno de
+                    <span id="span_valores5" class="span_valores"></span>á <span id="span_valores6"
+                        class="span_valores"></span>
+
+                    <br>
+                    <br>
+
+
+                    <b id="b_títulos">BÔNUS 2</b>
+
+                    <br>
+                    <br>
+
+                    Por não ter detectado um funcionário com níveis de calor
+                    acima do normal o quanto antes, sua empresa agora é considerada como um âmbiente de trabalho
+                    insalubre e possível foco de COVID-19, sua empresa frigorifica corre o risco de fechar.
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="imagem"><img id="logo" src="imagens/logo.png"></div>
+        <p>Todos os direitos reservados ©SafeTec DYNAMICS 2021</p>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function but_calc() {
+        var N_func = Number(qtd_func.value); //qtd total de funcionarios
+        var D_func = Number(func_doent.value); //funcionarios doentes
+        var salario = Number(val_sal.value); //salario digitado -- valor medio costuma ser de R$1449,00
+        var segu_me = Number(val_seg.value); //valor mensal do seguro
+        var ganho_men = Number(ganhos.value); //ganhos mensais da empresa
+
+
+        var segu_an = segu_me * 12; //seguro anual de apenas um funcionario
+        var ganho_an = ganho_men * 12 // ganho anual da empresa
+        var segu_men_tot = segu_me * N_func; //seguro mensal total de TODOS os funcionarios 
+        var segu_tot = segu_an * N_func; //total de seguro pago ANUALMENTE a TODOS funcionarios
+        var salario_tot = salario * N_func; //salario pago a TODOS os funcionarios
+
+
+        var calc = D_func / 100;
+        var calc2 = (calc * 50) / N_func;
+        var calc3 = calc2 * 100;
+
+        var preju = (calc3 * ganho_men) / 100;
+        if (N_func == '' || D_func == '' || salario == '' || segu_me == '' || ganho_men == '') {
+            alert('Preencha todos os campos!')
+
+        } else {
+            div_preencher.style.display = 'block'
+            div_preencher2.style.display = 'none'
+
+
+        }
+
+
+        span_valores7.innerHTML = `R$${ganho_men.toFixed(2)}`
+        span_valores8.innerHTML = `${D_func}`
+        span_valores9.innerHTML = `${calc3.toFixed(2)}%`
+        span_valores10.innerHTML = `R$${preju.toFixed(2)}`
+        span_valores11.innerHTML = ` R$${segu_tot.toFixed(2)}`
+
+
+
+    }
+
+    function simular_covid() {
+        var N_func = Number(qtd_func.value); //qtd total de funcionarios
+        var D_func = Number(func_doent.value); //funcionarios doentes
+        var ganho_men = Number(ganhos.value); //ganhos mensais da empresa -- valor medio de 2milhões e 500k
+        var segu_me = Number(val_seg.value); //valor mensal do seguro -- valor medio de 225 á 250
+        var salario = Number(val_sal.value); //salario digitado -- valor medio costuma ser de R$1449,00
+
+        var prejuizo1 = 50 * salario
+        var prejuizo2 = 500 * salario
+        var segu_an = segu_me * 12; //seguro anual de apenas um funcionario
+        var segu_tot = segu_an * N_func; //total de seguro pago ANUALMENTE a TODOS funcionarios
+
+        if (N_func == '' || D_func == '' || salario == '' || segu_me == '' || ganho_men == '') {
+            alert('Preencha todos os campos!')
+
+        } else {
+            div_preencher.style.display = 'none'
+            div_preencher2.style.display = 'block'
+
+
+        }
+
+
+        span_valores1.innerHTML = `R$0,00`
+        span_valores2.innerHTML = `${D_func}`
+        span_valores3.innerHTML = `R$${ganho_men.toFixed(2)}`
+        span_valores4.innerHTML = `R$${segu_tot.toFixed(2)}`
+        span_valores5.innerHTML = `R$${prejuizo1.toFixed(2)}`
+        span_valores6.innerHTML = `R$${prejuizo2.toFixed(2)}`
+
+    }
+
+</script>
+</body>
+
+</html>

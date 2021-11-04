@@ -1,0 +1,197 @@
+* {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/*#fundo{
+    background-image: url(fundo.png);
+    background-size: cover;
+}*/
+
+.header{
+    height: 100px;
+    background-color: #3D3A39;
+}
+
+.conteiner{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+}
+
+.conteiner_02{
+    width: 70%;
+}
+
+.header .conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.header h1{
+    color: #DAA631;
+}
+
+.header h2{
+    color: white;
+}
+
+.navbar li{
+    font-weight: lighter;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .active{
+    font-weight: bolder;
+    color: goldenrod;
+}
+
+#logo{
+    width: 100px;
+}
+
+body{
+    background-color: rgb(197, 187, 187);
+}
+.centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+#body_simulador{
+    background:linear-gradient(45deg,#F7FD04,#F9B208,#F98404,#FC5404);
+    
+}
+
+     #div_preencher{
+    border-radius: 5px;  width: 500px; border-style: solid; border-color: gold; text-align: center;
+    display: none;
+    background-color: white;
+    margin-bottom: 20px;
+    color: black;
+
+}
+#div_preencher2{
+     border-radius: 5px; ; width: 500px; border-style: solid; border-color: gold; text-align: center;
+     display: none;
+     background-color: white;
+     color: black;
+
+}
+
+.letra{
+    font-family: Helvetica;
+}
+
+.half_box {
+    flex: 1 1 45%;
+    position: relative;
+}
+
+.spacing {
+    margin-right: 2.5%;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+input {
+    border-bottom: 2px solid #323232;
+    padding: 10px;
+    font-size: .9rem;
+    margin-bottom: 40px;
+}
+
+input:focus {
+    border-color: #DAA631;
+}
+
+input[type= "submit"] {
+    background-color: #DAA631;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+input, label{
+    display: block;
+    width: 100%;
+}
+
+input:focus, label:focus {
+    outline: none;
+}
+
+#botoes{
+    border-radius: 10px;
+    color: white;
+    background-color:goldenrod;
+    border: none;
+  
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    cursor: pointer;
+    
+    
+}
+.span_valores{
+    color: gold; 
+}
+#b_títulos{
+    color: goldenrod;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3D3A39;
+    height: 110px;
+    margin-top: 150px;
+}
+.footer p{
+    font-weight: bolder;
+    color: white;
+}
+#div_simule{
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+}
+ #simule{
+    color: goldenrod;
+    
+}

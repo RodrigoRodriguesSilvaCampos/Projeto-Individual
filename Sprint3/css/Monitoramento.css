@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.header{
+    height: 100px;
+    background-color: #3D3A39;
+}
+
+.conteiner{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+}
+
+.conteiner_02{
+    width: 70%;
+}
+
+.header .conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.header h1{
+    color: #DAA631;
+}
+
+.header h2{
+    color: white;
+}
+
+.header h4 {
+    color: white;
+}
+.navbar li{
+    font-weight: lighter;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .active{
+    font-weight: bolder;
+    color: goldenrod;
+}
+
+#logo{
+    width: 100px;
+}
+
+#check {
+    display: none;
+}
+
+img {
+    width: 40px;
+}
+
+#icone {
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+.barra {
+    background-color: #333;
+    height: 150%;
+    width: 300px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.link {
+    background-color: #494950;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    transform: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid #222;
+    opacity: 0;
+    margin-top: 200px;
+}
+
+.link:hover {
+    background-color: #050542;
+
+}
+
+#check:checked ~ .barra {
+    transform: translateX(300px);
+}
+
+#check:checked ~ .barra nav a .link{
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: .2s;
+
+}
+
+.grafico {
+    width: 70%;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: 50px ;
+    border-radius: 15px;
+    border: solid black;
+    background-color: white;
+}
+
+.grafico h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.6rem; /*adaptar ao elemento root (a tela)*/
+    color: #DAA631;
+}
+
+.Titulo_Legenda {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 26%;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.Titulo_Legenda h1 {
+    color: #DAA631;
+    font-size: 25px;
+}
+
+.legenda {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 26%;
+    margin-top: 25px;
+    margin-bottom: 100px;
+}
+
+.legenda p {
+    align-items: center;
+    font-size: 12px;
+}
+
+.div_01 {
+    width: 20px;
+    height: 20px;
+    background-color: #add8e6;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+.div_02 {
+    width: 20px;
+    height: 20px;
+    background-color: #ffa500;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+.div_03 {
+    width: 20px;
+    height: 20px;
+    background-color: #ffff00;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+.div_04 {
+    width: 20px;
+    height: 20px;
+    background-color: #008000;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+.div_05 {
+    width: 20px;
+    height: 20px;
+    background-color: #B8860B;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+.div_06 {
+    width: 20px;
+    height: 20px;
+    background-color: #c572e8;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+.div_07 {
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3D3A39;
+    height: 110px;
+}
+
+.footer p{
+    font-weight: bolder;
+    color: white;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeTec - Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="shortcut icon" href="imagens/favicon.png">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="conteiner">
+            <img id="logo" src="imagens/logo.png" alt="logo da marca">
+            <div class="conteiner_02">
+                <h1>SafeTec</h1>
+                <h2>DYNAMICS</h2>
+            </div>
+            <ul class="navbar">
+                <li><a href="Index.html">Menu</a></li>
+                <li><a href="simulador.html">Simulação</a></li>
+                <li>|</li>
+                <li><a class="active" href="">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="conteiner_cadastro">
+        <h1>Cadastre-se</h1>
+        <form id="registro">
+            <div class="full_box spacing">
+                <label for="name_fantasia">Nome Fantasia</label>
+                <input type="text" name="name" id="nome" placeholder="Digite o nome da empresa" data-min-length= "3" data-required >
+            </div>
+            <div class="half_box">
+                <label for="razao_social">Razão Social</label>
+                <input type="text" name="name" id="razao_social" placeholder="Digite a razão social" data-max-length= "10" data-required data-only-letters>
+            </div>
+            <div class="half_box spacing">
+                <label for="cnpj">CNPJ Empresa</label>
+                <input type="number" name="number" id="cnpj" placeholder="Digite o CNPJ" data-required>
+            </div>
+            <div class="half_box">
+                <label for="cep">CEP</label>
+                <input type="number" name="number" id="cep" placeholder="Digite o CEP" data-required>
+            </div>
+            <div class="half_box spacing">
+                <label for="rua">Logradouro</label>
+                <input type="text" name="text" id="rua" placeholder="Digite sua rua" data-required>
+            </div>
+            <div class="half_box">
+                <label for="bairro">Bairro</label>
+                <input type="text" name="text" id="bairro" placeholder="Digite o nome do bairro" data-required>
+            </div>
+            <div class="half_box spacing">
+                <label for="numero">Numero</label>
+                <input type="number" name="number" id="numero" placeholder="Digite o numero" data-required>
+            </div>
+            <div class="half_box">
+                <label for="complemento">Complemento</label>
+                <input type="text" name="text" id="complemento" placeholder="Digite o complemento">
+            </div>
+            <div class="half_box spacing">
+                <label for="estado">Estado</label>
+                <input type="text" name="text" id="estado" placeholder="Digite o nome do estado" data-required>
+            </div>
+            <div class="half_box">
+                <label for="cidade">Cidade</label>
+                <input type="text" name="text" id="cidade" placeholder="Digite o nome da cidade" data-required>
+            </div>
+            <div class="half_box spacing">
+                <label for="tel_fixo">Telefone</label>
+                <input type="number" name="number" id="tel_01" placeholder="Digite o numero de telefone" data-required>
+            </div>
+            <div class="half_box">
+                <label for="tel_celular">Telefone secundário</label>
+                <input type="number" name="number" id="tel_02" placeholder="Digite o numero de telefone">
+            </div>
+            <div class="half_box spacing">
+                <label for="email">E-mail Empresa</label>
+                <input type="email" name="email" id="email" placeholder="Digite o e-mail da empresa" data-min-length="3" data-required data-email-validate>
+            </div>
+            <div class="half_box">
+                <label for="senha">Crie uma senha</label>
+                <input type="password" name="password" id="senha" placeholder="Crie uma senha" data-required data-password-validate>
+            </div>
+            <div class="half_box spacing">
+                <label for="senha_confirme">Confirme sua senha</label>
+                <input type="password" name="password_confirmation" id="confirmar_senha" placeholder="Confirme sua senha" data-required data-equal= "password">
+            </div>
+            <div class="full_box">
+                <input type="checkbox" name="acordo" id="acordo">
+                <label for="acordo" id="acordo_label">Eu li e aceito os <a href="a">termos de uso</a></label>
+            </div>
+            <div class="full_box">
+                <input type="submit" id="btn_submit" value="Registrar" onclick="showModal()">
+            </div>
+        </form>
+    </div>
+    <p class="error-validation template"></p>
+<!-- 
+    <div class="modal" id="modal">
+        <div class="modal_content">
+            <span onclick="hideModal()">&times;</span>
+            <h1>Empresa cadastrada com sucesso!!!</h1>
+            <p>Verifique sua caixa de e-mail, para validar as ultimas etapas.</p>
+        </div>
+    </div>
+-->   
+    </div>
+    <div class="footer">
+        <div class="imagem"><img id="logo" src="imagens/logo.png"></div>
+        <p>Todos os direitos reservados ©SafeTec Dynamics 2021</p>
+    </div>
+
+</body>
+</html>
+<script src="cadastro_script.js"></script>

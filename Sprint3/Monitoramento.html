@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeTec - Monitoramento</title>
+    <link rel="stylesheet" href="css/Monitoramento.css">
+    <link rel="shortcut icon" href="imagens/favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+	<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+	<style>
+		canvas {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+	</style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="conteiner">
+            <img id="logo" src="imagens/logo.png" alt="logo da marca">
+            <div class="conteiner_02">
+            <h1>SafeTec</h1>
+            <h2>DYNAMICS</h2>
+            </div>
+            <ul class="navbar">
+                <li class="active"> Olá, Fernando Brandão</li>
+                <li>|</li>
+                <li><a href="">Perfil</a></li>
+                 <li><a href="">Configuração</a></li>
+                <li><a href="Index.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>  
+
+    <input type="checkbox" id="check">
+    <label for="check" id="icone">
+        <img src="imagens/menu.png">
+    </label>
+
+    <div class="barra">
+    <nav>
+            <a href="Home.html"><div class="link">Home</div></a>
+            <a href="Dashboard.html"><div class="link">Dashboard</div></a>
+            <a href=""><div class="link">Monitoramento</div></a>
+            <a href=""><div class="link">Relatórios</div></a>
+            <a href=""><div class="link">Integrações</div></a>
+    </nav>
+    </div>      
+    
+    <div class="grafico">
+		<h1>Setor Bovino - Funcionário 01</h1>
+			
+        <section style="display: none; text-align: center; margin-bottom: 20px;">
+            <h2>Média: <label id='average'>0.00</label></h2>
+        </section>
+
+        <section style="display: block; text-align: center; margin-bottom: 20px;">
+            <h2>Temperatura: <span id="div_msg">0.00</span></h2>
+        </section>
+
+			<section style="width:100%">
+				<canvas id="chart"></canvas>
+		<section>
+            <br><br>
+
+	</div>
+    <div class="Titulo_Legenda">
+    <h1>Legenda:</h1>        
+    </div>
+    <div class="legenda">
+        <div class="div_01"></div> <p>Temperatura Critica</p> 
+        <div class="div_02"></div> <p>Temperatura em fase de Emergência</p> 
+        <div class="div_03"></div> <p>Temperatura abaixo do ideal</p> 
+        <div class="div_04"></div> <p>Temperatura Ideal</p> 
+        <div class="div_05"></div> <p>Temperatura acima do ideal</p> 
+        <div class="div_06"></div> <p>Temperatura em fase de Emergência</p> 
+        <div class="div_07"></div> <p>Temperatura Critica</p> 
+    </div>
+   
+    <div class="footer">
+        <div class="imagem"><img id="logo" src="imagens/logo.png"></div>
+        <p>Todos os direitos reservados ©SafeTec Dynamics 2021</p>
+    </div>
+</body>
+</html> 
+<script>
+
+    var context = document.getElementById("chart").getContext("2d");
+    context.canvas.width = 1000;
+    context.canvas.height = 300;
+    
+    var configuration = {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: "Pulseira 01",
+                fill: false,
+            //    data: [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+                type: 'line',
+                borderColor: ['black'],
+            	backgroundColor: [''],
+                tension: 0.3
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    distribution: 'series',
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Temperatura'
+                    },
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            },
+            animation: {
+                duration: 0
+            }
+        }
+    };
+    
+    var chart = new Chart(context, configuration);
+    
+    this.lastIndexTemp = 0;
+    this.time = 0;
+
+    function get_data(){
+
+        var http = new XMLHttpRequest();
+        http.open('GET', 'http://localhost:3000/api', false);
+        http.send(null);        
+        
+        var obj = JSON.parse(http.responseText);
+        if (obj.data.length == 0){
+            return;
+        }
+
+        var _lastIndexTemp = this.lastIndexTemp;
+        this.lastIndexTemp = obj.data.length;
+        listTemp = obj.data.slice(_lastIndexTemp);
+
+        listTemp.forEach(data => {
+
+            if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
+                chart.data.labels.shift();
+                chart.data.datasets[0].data.shift();
+            }
+            div_msg.innerHTML = `${(data).toFixed(2)}`
+            chart.data.labels.push(this.time++);
+            chart.data.datasets[0].data.push(parseFloat(data));
+
+            if (data <= 30){
+                chart.data.datasets[0].backgroundColor='#add8e6';
+
+            }
+            if (data <= 35){
+                chart.data.datasets[0].backgroundColor='#ffa500';
+
+            }
+            if (data > 35.1 && data <= 36.3) {
+                chart.data.datasets[0].backgroundColor='#ffff00';
+
+            }
+            if (data >=36.4 && data <= 37.6){
+                chart.data.datasets[0].backgroundColor='#008000';
+
+            }
+            if (data >= 37.7 && data <=37.9){
+                chart.data.datasets[0].backgroundColor='#B8860B';
+
+            }
+            if (data >= 38 && data < 39){
+                chart.data.datasets[0].backgroundColor='#c572e8';
+
+            }
+            if (data >= 39){
+                chart.data.datasets[0].backgroundColor='#ff0000';
+
+            }
+
+            chart.update();
+        });
+
+        
+        
+        document.getElementById('average').textContent = obj.average;
+    } 
+
+    setInterval(() => {
+        get_data();
+    }, 1000);
+</script>

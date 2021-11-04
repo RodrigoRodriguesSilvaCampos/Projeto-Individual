@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeTec - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="imagens/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Roboto&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="conteiner">
+            <img id="logo" src="imagens/logo.png" alt="logo da marca">
+            <div class="conteiner_02">
+                <h1>SafeTec</h1>
+                <h2>DYNAMICS</h2>
+            </div>
+            <ul class="navbar">
+                <li><a href="Index.html">Menu</a></li>
+                <li><a href="simulador.html">Simulação</a></li>
+                <li>|</li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a class="active" href="">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="formLogin">
+            <i class="fa fa-user draw" style="font-size: 80px"></i>
+            <div class="input_config">
+                <form name="f1">
+                    <span>Seu e-mail:</span>
+                    <input style="display: block;" type="email" id="email_user" placeholder="Insira o e-mail para login">
+                    <div id="msgemail"></div>
+                </form>
+            </div>
+            <div>
+                <span>Sua senha:</span>
+                <input style="display: block;" type="password" id="senha_user" placeholder="**********">
+            </div>
+            <u><a class="login_reset" href="trocar_senha.html">Esqueci a senha</a></u>
+            <div>
+                <button onclick="validacaoEmail()">Entrar</button>
+            </div>
+            <div class="conta">
+                Ainda não tem conta? <u><a href="cadastro.html">Cadastre-se</a></u>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="imagem"><img id="logo" src="imagens/logo.png"></div>
+        <p>Todos os direitos reservados ©SafeTec Dynamics 2021</p>
+    </div>
+
+
+    <script>
+        function validacaoEmail() {
+            var usuario = email_user.value
+            var senha = senha_user.value
+
+            if (usuario == 'fernando.brandao@swift.com.br' && senha == '#Tubrandao01') {
+                alert("Bem vindo a Safetec DYNAMICS");
+                window.location.href = 'Home.html'
+            }
+            else if (usuario == '' && senha == '') {
+                alert("Por favor preencha todos os campos!");
+            }
+            else {
+                alert("Usuario ou senha incorretos");
+            }
+
+
+        }
+
+ // function validacaoEmail(field) {
+         //   usuario = field.value.substring(0, field.value.indexOf("@"));
+           // dominio = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
+
+            //if ((usuario.length >= 1) &&
+           //     (dominio.length >= 3) &&
+           //     (usuario.search("@") == -1) &&
+           //     (dominio.search("@") == -1) &&
+          //      (usuario.search(" ") == -1) &&
+          //      (dominio.search(" ") == -1) &&
+          //      (dominio.search(".") != -1) &&
+           //     (dominio.indexOf(".") >= 1) &&
+           //     (dominio.lastIndexOf(".") < dominio.length - 1)) {
+           //     document.getElementById("msgemail");
+           //     alert("E-mail valido");
+           // }
+           // else {
+           //     document.getElementById("msgemail");
+           //     alert("E-mail invalido");
+           // }
+      //  }
+
+
+    </script>
+
+</body>
+
+</html>

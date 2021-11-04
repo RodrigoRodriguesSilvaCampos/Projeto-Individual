@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    color: #323232;
+    border: none;
+}
+
+body {
+    background:linear-gradient(45deg,#F7FD04,#F9B208,#F98404,#FC5404);
+}
+
+.header{
+    height: 100px;
+    background-color: #3D3A39;
+    margin-bottom: 50px;
+}
+
+.conteiner{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+}
+
+.conteiner_02{
+    width: 70%;
+}
+ 
+.header .conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.header h1{
+    color: #DAA631;
+}
+
+.header h2{
+    color: white;
+}
+
+.navbar li{
+    font-weight: lighter;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .active{
+    font-weight: bolder;
+    color: goldenrod;
+}
+
+#logo{
+    width: 100px;
+}
+
+.banner {
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+.banner .formLogin {
+    background-color: white;
+    height: 400px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+}
+
+.banner .formLogin div {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner .formLogin div span {
+    color: #3D3A39;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.banner .formLogin div input {
+    border:  2px solid #3D3A39;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.banner .formLogin button {
+    background-color: #DAA631;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.banner .formLogin .conta {
+    color: #3D3A39;
+    font-weight: bold;
+    font-size: .9rem;
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+}
+
+.banner .formLogin .conta a {
+    text-decoration: none;
+    color: #3D3A39;
+    margin-left: 10px;
+}
+
+.banner .formLogin .login_reset {
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+    font-weight: bolder;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3D3A39;
+    height: 110px;
+    margin-top: 50px;
+}
+.footer p{
+    font-weight: bolder;
+    color: white;
+}

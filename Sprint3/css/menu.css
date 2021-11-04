@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    color: #323232;
+    border: none;
+}
+ 
+body {
+    background:linear-gradient(45deg,#F7FD04,#F9B208,#F98404,#b33c06);
+}
+
+.header{
+    height: 100px;
+    background-color: #3D3A39;
+}
+
+.conteiner{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+}
+
+.conteiner_02{
+    width: 70%;
+}
+
+.header .conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.header h1{
+    color: #DAA631;
+}
+
+.header h2{
+    color: white;
+}
+
+.navbar li{
+    font-weight: lighter;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .active{
+    font-weight: bolder;
+    color: goldenrod;
+}
+
+#logo{
+    width: 100px;
+}
+/*
+.banner {
+    height: 550px;
+    width: 100vw;
+    background-image: url(Banner_Menu.png);
+    background-size: cover;
+    margin-bottom: 50px;   
+}
+*/
+.corpo{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corpo .conteiner_inicio{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background-color: white;
+    height: 700px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.corpo .conteiner_inicio .titulo {
+    color: goldenrod;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.conteiner_conjunto{
+    display: flex;
+}
+
+.texto1{
+    padding-left: 35px;
+    width: 50%;
+    text-align: justify;
+    font-size: 28px;
+}
+.conteiner_inicio .imagem1{
+    width: 50%;
+    padding-right: 2%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    }
+
+.proposito {
+    height: 450px;
+    background-color: #e5e5e5;
+    margin-top: 50px;
+}
+
+.proposito .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proposito .container h2 {
+    background-color: #323232;
+    padding: 25px;
+    border-radius: 10px;
+    color: goldenrod;
+    margin-top: 50px;
+}
+
+.proposito .container .mvv div img {
+    height: 100px;
+    width: 100px;
+}
+
+.proposito .container .mvv {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.proposito .container .mvv div {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.proposito .container .mvv h3 {
+    color: goldenrod;
+    font-weight: bolder;
+    margin: 25px 0;
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.separacao{
+    height: 30px;
+    background-color: #3D3A39;
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.equipe {
+    height: 450px;
+    background-color: #e5e5e5;
+}
+
+.equipe .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.equipe .container h2 {
+    background-color: #323232;
+    padding: 25px;
+    border-radius: 10px;
+    color: goldenrod;
+    margin-top: 50px;
+}
+
+.equipe .container .ned div img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid #323232;
+}
+
+.equipe .container .ned {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.equipe .container .ned div {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.equipe .container .ned h3 {
+    color: goldenrod;
+    font-weight: bolder;
+    margin: 25px;
+}
+
+.equipe .container .ned h4{
+    color: goldenrod;
+}
+
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3D3A39;
+    height: 110px;
+}
+
+.footer p{
+    font-weight: bolder;
+    color: white;
+}
