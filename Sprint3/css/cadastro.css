@@ -3,30 +3,32 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
-    color: #323232;
-    border: none;
+     border: none;
 }
-
+ 
 body {
-    background:linear-gradient(45deg,#F7FD04,#F9B208,#F98404,#FC5404);
+    background:linear-gradient(#191A19,#1E5128,#4E9F3D,#D8E9A8);
 }
 
 .header{
-    height: 100px;
-    background-color: #3D3A39;
-    margin-bottom: 50px;
+    width: 100%;
+    height: 70px;
+    background:linear-gradient(45deg,#191A19,#1E5128,#4E9F3D,#D8E9A8);
+    
+    
 }
 
 .conteiner{
     width: 95%;
     height: 100%;
     margin: auto;
+    
 }
 
 .conteiner_02{
     width: 70%;
 }
- 
+
 .header .conteiner{
     display: flex;
     flex-direction: row;
@@ -43,11 +45,12 @@ body {
 }
 
 .header h1{
-    color: #DAA631;
+    color: #ffffff;
 }
 
 .header h2{
-    color: white;
+    color: yellow;
+    margin-left: 65px;
 }
 
 .navbar li{
@@ -63,11 +66,7 @@ body {
 
 .navbar .active{
     font-weight: bolder;
-    color: goldenrod;
-}
-
-#logo{
-    width: 100px;
+    color: yellow;
 }
 
 input, label{
@@ -84,7 +83,8 @@ a {
 }
 
 #conteiner_cadastro {
-   width: 700px;
+   margin-top: 50px;
+    width: 700px;
    margin-left: auto;
    margin-right: auto;
    background-color: white;
@@ -217,7 +217,7 @@ span:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #3D3A39;
+    background-color: #000000;
     height: 110px;
     margin-top: 50px;
 }

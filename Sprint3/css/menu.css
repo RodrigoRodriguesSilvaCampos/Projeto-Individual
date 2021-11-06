@@ -3,23 +3,26 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
-    color: #323232;
-    border: none;
+     border: none;
 }
  
 body {
-    background:linear-gradient(45deg,#F7FD04,#F9B208,#F98404,#b33c06);
+    background:linear-gradient(#191A19,#1E5128,#4E9F3D,#D8E9A8);
 }
 
 .header{
-    height: 100px;
-    background-color: #3D3A39;
+    width: 100%;
+    height: 70px;
+    background:linear-gradient(45deg,#191A19,#1E5128,#4E9F3D,#D8E9A8);
+    position: fixed;
+    
 }
 
 .conteiner{
     width: 95%;
     height: 100%;
     margin: auto;
+    position: static;
 }
 
 .conteiner_02{
@@ -42,11 +45,12 @@ body {
 }
 
 .header h1{
-    color: #DAA631;
+    color: #ffffff;
 }
 
 .header h2{
-    color: white;
+    color: yellow;
+    margin-left: 65px;
 }
 
 .navbar li{
@@ -62,20 +66,10 @@ body {
 
 .navbar .active{
     font-weight: bolder;
-    color: goldenrod;
+    color: yellow;
 }
 
-#logo{
-    width: 100px;
-}
-/*
-.banner {
-    height: 550px;
-    width: 100vw;
-    background-image: url(Banner_Menu.png);
-    background-size: cover;
-    margin-bottom: 50px;   
-}
+
 */
 .corpo{
     height: 100%;
@@ -83,6 +77,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .corpo .conteiner_inicio{
@@ -90,152 +85,108 @@ body {
     margin-bottom: 3%;
     background-color: white;
     height: 700px;
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     border-radius: 10px;
+    margin-left: 230px;
 }
 
+
 .corpo .conteiner_inicio .titulo {
-    color: goldenrod;
+    color: yellow;
     padding-top: 3%;
     padding-bottom: 3%;
-    font-size: 34px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .conteiner_conjunto{
     display: flex;
+    justify-content: center;
 }
 
 .texto1{
-    padding-left: 35px;
-    width: 50%;
+    
+    width: 60%;
     text-align: justify;
     font-size: 28px;
-}
-.conteiner_inicio .imagem1{
-    width: 50%;
-    padding-right: 2%;
-    display: flex;
-    align-items: right;
-    justify-content: right;
-    }
-
-.proposito {
-    height: 450px;
-    background-color: #e5e5e5;
-    margin-top: 50px;
+    font-weight: bold;
 }
 
-.proposito .container {
+
+   
+
+.imagem_começo{
+    width: 100%;;
+}
+.div_sites{
+     
+    width: fit-content;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
+    margin-left: 30px;
 }
 
-.proposito .container h2 {
-    background-color: #323232;
-    padding: 25px;
+.corpo .titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.corpo .titulo h1{
+    color: yellow;
+    background-color: rgb(1, 105, 1);
+    width: fit-content;
     border-radius: 10px;
-    color: goldenrod;
-    margin-top: 50px;
-}
-
-.proposito .container .mvv div img {
-    height: 100px;
-    width: 100px;
-}
-
-.proposito .container .mvv {
-    width: 100%;
-    margin-top: 50px;
     display: flex;
-    justify-content: space-around;
-}
-
-.proposito .container .mvv div {
-    width: 20vw;
+    margin-bottom: 30px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    
+    
+}
+#bet365{
+    height: 200px;
+    width: 200px;
+}
+#sportingbet{
+    height: 200px;
+    width: 200px;
 }
 
-.proposito .container .mvv h3 {
-    color: goldenrod;
-    font-weight: bolder;
-    margin: 25px 0;
+#betfair{
+    height: 200px;
+    width: 200px;
+}
+#xbet{
+    height: 200px;
+    width: 200px;
+}
+#betano{
+    height: 200px;
+    width: 200px;
 }
 
-/*
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-*/
-
-.separacao{
-    height: 30px;
-    background-color: #3D3A39;
+#kto{
+    height: 200px;
+    width: 150px;
 }
-
-/*
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-*/
-
-.equipe {
-    height: 450px;
-    background-color: #e5e5e5;
-}
-
-.equipe .container {
+#junção{
+    flex-direction: row;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.equipe .container h2 {
-    background-color: #323232;
-    padding: 25px;
-    border-radius: 10px;
-    color: goldenrod;
-    margin-top: 50px;
-}
 
-.equipe .container .ned div img {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 5px solid #323232;
-}
 
-.equipe .container .ned {
-    width: 100%;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
-}
 
-.equipe .container .ned div {
-    width: 20vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
-.equipe .container .ned h3 {
-    color: goldenrod;
-    font-weight: bolder;
-    margin: 25px;
-}
 
-.equipe .container .ned h4{
-    color: goldenrod;
-}
+
 
 
 
@@ -243,8 +194,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #3D3A39;
+    background-color: #000000;
     height: 110px;
+    position: static;
+    width: auto;
+    margin-top: 300px;
 }
 
 .footer p{
