@@ -180,6 +180,9 @@ body {
     flex-direction: row;
     display: flex;
 }
+.div_inicial{
+    background-image: url('imagens/Img_start.jpg');
+}
 
 
 
