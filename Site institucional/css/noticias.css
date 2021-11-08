@@ -88,6 +88,7 @@ body {
     font-size: small;
     text-align: justify;
     font-weight: bold;
+    cursor: pointer;
    
     
 }
@@ -124,4 +125,7 @@ body {
  .noticias .txt_not{
     flex-direction: column;
     display: flex;
+}
+.centro h1{margin-top: 50px;
+    
 }

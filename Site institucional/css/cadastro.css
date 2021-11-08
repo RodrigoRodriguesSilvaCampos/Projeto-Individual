@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
-     border: none;
+   
 }
  
 body {
@@ -86,6 +86,10 @@ a {
    background-color: white;
    border-radius: 10px;
    padding: 25px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+   
 }
 
 #conteiner_cadastro h1 {
