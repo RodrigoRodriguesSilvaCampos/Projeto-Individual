@@ -103,8 +103,15 @@ body {
    
     
 }
+.times_fut{
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-right: 5px;
+}
 
-
+.centro h1{
+    color: greenyellow;
+}
     
 
 

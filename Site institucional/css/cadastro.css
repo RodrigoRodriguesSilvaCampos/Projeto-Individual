@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
     font-family: Helvetica, sans-serif;
    
 }
@@ -89,17 +89,38 @@ a {
     align-items: center;
     display: flex;
     flex-direction: column;
+    font-weight: bold;
    
 }
 
 #conteiner_cadastro h1 {
     text-align: center;
     margin-bottom: 25px;
-    font-size: 2.6rem; 
-    color: yellow;
+    font-size: x-large;
+    color: greenyellow;
+}
+.ipt_cad{
+    border: solid 2px grey;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+     
 }
 
+#btn_cad{
 
+    margin-top: 30px;
+    
+    background-color: yellow;
+    color: white;
+    height: 40px;
+        width: 50%;
+        cursor: pointer;
+        font-size: 20px;
+        
+}
 
 .footer{
     display: flex;
