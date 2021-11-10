@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafeTec - Dashboard</title>
+    <title>TechnicalBET - Dashboard</title>
     <link rel="stylesheet" href="css/Dashboard.css">
     <link rel="shortcut icon" href="imagens/favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -21,17 +21,18 @@
             <ul class="navbar">
                 <li><a  href="Home.html">Menu</a></li>
                 <li>|</li>
-                <li><a href="">Jogos</a></li>
+                <li><a href="Jogos.html">Jogos</a></li>
                  <li><a class="active" href="Dashboard.html">Gráficos</a></li>
                 <li><a href="Index.html">Sair</a></li>
             </ul> 
         </div>
     </div>  
 
-    <input type="checkbox" id="check">
-    <label for="check" id="icone">
-        <img src="imagens/menu.png">
-    </label>
+   <div class="Times">
+       <h1 id="co">Corinthians</h1><img class="img_tim" src="imagens/corinthians.png" >
+       <h2>X</h2>
+       <img class="img_tim" src="imagens/gremio.png" ><h1 id="gr">Grêmio</h1>
+    </div>
 
     
 
@@ -44,21 +45,23 @@
         <div class="nav_bar_02">
             <div class="bar_graficos">
                 <div class="graph">
-                    <h1>Média Pessoas/Turno</h1>
+                    <h1>Histórico de Jogos no Campeonato Brasileiro</h1>
                     <div class="box red">
-                        <h1>49</h1>
-                        <h3>Manhã</h3>
-                        <p>Quant.</p>
+                        <h1>29</h1>
+                        <h3>Vitórias</h3>
+                        <p>Grêmio</p>
+                        <img src="imagens/gremio.png" >
                     </div>
                     <div class="box yellow">
-                        <h1>3</h1>
-                        <h3>Hora Extra</h3>
+                        <h1>13</h1>
+                        <h3>Empates</h3>
                         <p>Quant.</p>
                     </div>
                     <div class="box green">
-                        <h1>29</h1>
-                        <h3>Tarde</h3>
-                        <p>Quant.</p>
+                        <h1>25</h1>
+                        <h3>Vitórias</h3>
+                        <p>Corinthians</p>
+                        <img src="imagens/corinthians.png" >
                     </div>
                 </div>
             </div>
@@ -82,28 +85,28 @@
 // Gráfico 01.
   var data = {
   labels: [
-    'Pulseiras Ativas',
-    'Pulseiras Inativas',
-    'Pulseiras em Manutenção'
+    'Média de cartões do Corinthians',
+    'Média de cartões do grêmio',
+    
   ],
   datasets: [{
     label: '',
-    data: [80, 15, 5],
+    data: [1.64,3],
     backgroundColor: [
-    '#32CD32',
-    '#FF1616',
-    '#FFD700'
+    '#000000',
+    '#1481BF',
+    
 
 
     ],
-    borderColor: ['black'],
+    borderColor: ['grey'],
     hoverOffset: 4
   }]
 
 };
 
   var config = {
-      type: 'doughnut',
+      type: 'pie',
       data: data,
       options: {
         maintainAspectRatio: false
@@ -114,15 +117,16 @@
 var config_2 = {      
       type: 'bar',
       data: {
-          labels: ['07h', '10h', '13h', '16h', '19h', '22h'],
+          labels: ['Corinthians', 'Grêmio', ],
           datasets: [{
-              label: 'Média da Temperatura - Setor Bovino',
-              data: [36.5, 36.9, 37.2, 37.5, 37.8, 37.5],
+              label: 'Méida de finalizações (no gol) ',
+              data: [9.81,4],
               backgroundColor: [
-                  '#32CD322'
+              '#000000',
+              '#1481BF',
               ],
               borderColor: [
-                  'rgba(50, 205, 50, 1)'
+                  'grey'
               ],
               borderWidth: 2
           }]
@@ -136,35 +140,32 @@ var config_2 = {
       }
   }
 
-// Gráfico 03.
+
 
 
 // Gráfico 04.
 
 var data = {
   labels: [
-    'Media - Setor Bovino',
-    'Média - Setor Avario',
-    'Setor - Suíno'
+    'Média de impedimentos por jogo(últimos 10 jogos)'
   ],
   datasets: [{
     label: '',
-    data: [36.9, 34.5, 38.9],
+    data: [1.4,0.7],
     backgroundColor: [
-    '#008000',
-    '#add8e6',
-    '#c572e8'
+    '#000000',
+    '#1481BF',
 
 
     ],
-    borderColor: ['black'],
+    borderColor: ['grey'],
     hoverOffset: 1
   }]
 
 };
 
   var config_4 = {
-      type: 'pie',
+      type: 'doughnut',
       data: data,
       options: {
         maintainAspectRatio: false

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+     border: none;
+     
+}
+body{
+   background: linear-gradient(#191A19,#1E5128,#4E9F3D,#D8E9A8);
+   width: 100vw;
+   height: 100vh;
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+    background:linear-gradient(45deg,#191A19,#1E5128,#4E9F3D,#D8E9A8);
+   
+    
+}
+
+.conteiner{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    position: static;
+}
+
+.conteiner_02{
+    width: 70%;
+}
+
+.header .conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.header h1{
+    color: #ffffff;
+}
+
+.header h2{
+    color: yellow;
+    margin-left: 65px;
+}
+
+.navbar li{
+    font-weight: lighter;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .active{
+    font-weight: bolder;
+    color: yellow;
+}
+
+.centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.centro h1{
+    color: greenyellow;
+    margin-top:  50px;
+}
+ #Bras_tit{
+    flex-direction: row;
+    display: flex;
+    margin-top: 20px;
+    color: white;
+    
+}
+
+.centro #Bras_tit h2{
+    margin-top: 15px;
+    
+}
+.jogo_tit{
+    margin-left: 3%;
+    margin-top: 3%;
+    color: rgb(158, 157, 157);
+}
