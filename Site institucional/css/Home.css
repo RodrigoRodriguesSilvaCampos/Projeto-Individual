@@ -102,33 +102,12 @@ nav a {
     text-decoration: none;
 }
 
-.link {
-    background-color: #494950;
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-    transform: all .2s linear;
-    color: #f4f4f9;
-    border-bottom: 2px solid #222;
-    opacity: 0;
-    margin-top: 200px;
-}
 
-.link:hover {
-    background-color: #050542;
 
-}
 
-#check:checked ~ .barra {
-    transform: translateX(300px);
-}
 
-#check:checked ~ .barra nav a .link{
-    opacity: 1;
-    margin-top: 0;
-    transition-delay: .2s;
 
-}
+
 
 .titulo {
     font-family: Arial, Helvetica, sans-serif;
