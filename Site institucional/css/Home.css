@@ -6,6 +6,9 @@
 
 body {
     background:linear-gradient(#191A19,#1E5128,#4E9F3D,#D8E9A8);
+    background-image: url('../imagens/Estadio.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header{
