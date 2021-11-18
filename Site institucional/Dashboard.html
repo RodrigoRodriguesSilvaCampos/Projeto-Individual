@@ -1,181 +1,321 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechnicalBET - Dashboard</title>
-    <link rel="stylesheet" href="css/Dashboard.css">
-    <link rel="shortcut icon" href="imagens/favicon.png">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechnicalBET - Dashboard</title>
+  <link rel="stylesheet" href="css/Dashboard.css">
+  <link rel="shortcut icon" href="imagens/favicon.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
- 
-    <div class="header">
-        <div class="conteiner">
-          
-            <div class="conteiner_02">
-            <h1>TECHNICAL</h1>
-            <h2>BET</h2>
-            </div>
-            <ul class="navbar">
-                <li><a  href="Home.html">Menu</a></li>
-                <li>|</li>
-                <li><a href="Jogos.html">Jogos</a></li>
-                 <li><a class="active" href="Dashboard.html">Gráficos</a></li>
-                <li><a href="Index.html">Sair</a></li>
-            </ul> 
-        </div>
-    </div>  
 
-   <div class="Times">
-       <h1 id="co">Corinthians</h1><img class="img_tim" src="imagens/corinthians.png" >
-       <h2>X</h2>
-       <img class="img_tim" src="imagens/gremio.png" ><h1 id="gr">Grêmio</h1>
+  <div class="header">
+    <div class="conteiner">
+
+      <div class="conteiner_02">
+        <h1>TECHNICAL</h1>
+        <h2>BET</h2>
+      </div>
+      <ul class="navbar">
+        <li><a href="Home.html">Menu</a></li>
+        <li>|</li>
+        <li><a href="Jogos.html">Jogos</a></li>
+        <li><a class="active" href="Dashboard.html">Gráficos</a></li>
+        <li><a href="Index.html">Sair</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="Times">
+    <h1 id="co">Corinthians</h1><img class="img_tim" src="imagens/corinthians.png">
+    <h2>X</h2>
+    <img class="img_tim" src="imagens/gremio.png">
+    <h1 id="gr">Grêmio</h1>
+  </div>
+
+
+
+  <div class="graficos">
+    <div class="nav_bar_01">
+      <div class="bar_graficos"><canvas id="chartline" style="width: 100%; height: 100%;"></canvas></div>
+      <div class="bar_graficos"><canvas id="chartline_2" style="width: 100%; height: 100%;"></canvas></div>
     </div>
 
-    
-
-    <div class="graficos">
-        <div class="nav_bar_01">
-            <div class="bar_graficos"><canvas id="chartline" style="width: 100%; height: 100%;"></canvas></div>
-            <div class="bar_graficos"><canvas id="chartline_2" style="width: 100%; height: 100%;"></canvas></div>
+    <div class="nav_bar_02">
+      <div class="bar_graficos">
+        <div class="graph">
+          <h1>Histórico de Jogos no Campeonato Brasileiro</h1>
+          <div class="box red">
+            <h1>29</h1>
+            <h3>Vitórias</h3>
+            <p>Grêmio</p>
+            <img src="imagens/gremio.png">
+          </div>
+          <div class="box yellow">
+            <h1>13</h1>
+            <h3>Empates</h3>
+            <p>Quant.</p>
+          </div>
+          <div class="box green">
+            <h1>25</h1>
+            <h3>Vitórias</h3>
+            <p>Corinthians</p>
+            <img src="imagens/corinthians.png">
+          </div>
         </div>
-        
-        <div class="nav_bar_02">
-            <div class="bar_graficos">
-                <div class="graph">
-                    <h1>Histórico de Jogos no Campeonato Brasileiro</h1>
-                    <div class="box red">
-                        <h1>29</h1>
-                        <h3>Vitórias</h3>
-                        <p>Grêmio</p>
-                        <img src="imagens/gremio.png" >
-                    </div>
-                    <div class="box yellow">
-                        <h1>13</h1>
-                        <h3>Empates</h3>
-                        <p>Quant.</p>
-                    </div>
-                    <div class="box green">
-                        <h1>25</h1>
-                        <h3>Vitórias</h3>
-                        <p>Corinthians</p>
-                        <img src="imagens/corinthians.png" >
-                    </div>
-                </div>
-            </div>
-            <div class="bar_graficos"><canvas id="chartline_4" style="width: 100%; height: 100%;"></canvas></div>
-
-        </div>
+      </div>
+      <div class="bar_graficos"><canvas id="chartline_4" style="width: 100%; height: 100%;"></canvas></div>
 
     </div>
-    
-    <div class="footer">
-       
-        <p>Todos os direitos reservados ©TechnicalBET  2021</p>
+
+  </div>
+  <div class="Times">
+    <h1 id="fla">Flamengo</h1><img class="img_tim" src="imagens/flamengo.png">
+    <h2>X</h2>
+    <img class="img_tim" src="imagens/Santos.png">
+    <h1 id="san">Santos</h1>
+  </div>
+
+
+
+  <div class="graficos">
+    <div class="nav_bar_01">
+      <div class="bar_graficos"><canvas id="chartline_5" style="width: 100%; height: 100%;"></canvas></div>
+      <div class="bar_graficos"><canvas id="chartline_6" style="width: 100%; height: 100%;"></canvas></div>
     </div>
+
+    <div class="nav_bar_02">
+      <div class="bar_graficos">
+        <div class="graph">
+          <h1>Histórico de Jogos no Campeonato Brasileiro</h1>
+          <div class="box red">
+            <h1>28</h1>
+            <h3>Vitórias</h3>
+            <p>Flamengo</p>
+            <img src="imagens/flamengo.png">
+          </div>
+          <div class="box yellow">
+            <h1>22</h1>
+            <h3>Empates</h3>
+            <p>Quant.</p>
+          </div>
+          <div class="box green">
+            <h1>21</h1>
+            <h3>Vitórias</h3>
+            <p>Santos</p>
+            <img src="imagens/Santos.png">
+          </div>
+        </div>
+      </div>
+      <div class="bar_graficos"><canvas id="chartline_8" style="width: 100%; height: 100%;"></canvas></div>
+
+    </div>
+
+  </div>
+
+  <div class="footer">
+
+    <p>Todos os direitos reservados ©TechnicalBET 2021</p>
+  </div>
 </body>
+
 </html>
 <script>
   var ctx = document.getElementById('chartline').getContext('2d');
   var ctx_2 = document.getElementById('chartline_2').getContext('2d');
   var ctx_4 = document.getElementById('chartline_4').getContext('2d');
-
-// Gráfico 01.
+  var ctx_5 = document.getElementById('chartline_5').getContext('2d');
+  var ctx_6 = document.getElementById('chartline_6').getContext('2d');
+  var ctx_8 = document.getElementById('chartline_8').getContext('2d');
+  // Gráfico 01.
   var data = {
-  labels: [
-    'Média de cartões do Corinthians',
-    'Média de cartões do grêmio',
-    
-  ],
-  datasets: [{
-    label: '',
-    data: [1.64,3],
-    backgroundColor: [
-    '#000000',
-    '#1481BF',
-    
-
+    labels: [
+      'Média de cartões do Corinthians',
+      'Média de cartões do grêmio',
 
     ],
-    borderColor: ['grey'],
-    hoverOffset: 4
-  }]
+    datasets: [{
+      label: '',
+      data: [1.64, 3],
+      backgroundColor: [
+        '#000000',
+        '#1481BF',
 
-};
+
+
+      ],
+      borderColor: ['grey'],
+      hoverOffset: 4
+    }]
+
+  };
 
   var config = {
-      type: 'pie',
-      data: data,
-      options: {
-        maintainAspectRatio: false
-      }
-    };
+    type: 'pie',
+    data: data,
+    options: {
+      maintainAspectRatio: false
+    }
+  };
 
-// Gráfico 02.
-var config_2 = {      
-      type: 'bar',
-      data: {
-          labels: ['Corinthians', 'Grêmio', ],
-          datasets: [{
-              label: 'Méida de finalizações (no gol) ',
-              data: [9.81,4],
-              backgroundColor: [
-              '#000000',
-              '#1481BF',
-              ],
-              borderColor: [
-                  'grey'
-              ],
-              borderWidth: 2
-          }]
-      },
-      options: {
-          scales: {
-              y: {
-                  beginAtZero: true
-              }
-          }
+  // Gráfico 02.
+  var config_2 = {
+    type: 'bar',
+    data: {
+      labels: ['Corinthians', 'Grêmio',],
+      datasets: [{
+        label: 'Méida de finalizações (no gol) ',
+        data: [9.81, 4],
+        backgroundColor: [
+          '#000000',
+          '#1481BF',
+        ],
+        borderColor: [
+          'grey'
+        ],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
       }
+    }
   }
 
 
 
 
-// Gráfico 04.
+  // Gráfico 04.
 
-var data = {
-  labels: [
-    'Média de impedimentos por jogo(últimos 10 jogos)'
-  ],
-  datasets: [{
-    label: '',
-    data: [1.4,0.7],
-    backgroundColor: [
-    '#000000',
-    '#1481BF',
-
-
+  var data = {
+    labels: [
+      'Média de impedimentos por jogo(últimos 10 jogos)'
     ],
-    borderColor: ['grey'],
-    hoverOffset: 1
-  }]
+    datasets: [{
+      label: '',
+      data: [1.4, 0.7],
+      backgroundColor: [
+        '#000000',
+        '#1481BF',
 
-};
+
+      ],
+      borderColor: ['grey'],
+      hoverOffset: 1
+    }]
+
+  };
 
   var config_4 = {
-      type: 'doughnut',
-      data: data,
-      options: {
-        maintainAspectRatio: false
+    type: 'doughnut',
+    data: data,
+    options: {
+      maintainAspectRatio: false
+    }
+  };
+  // Gráfico 05.
+  var data = {
+    labels: [
+      'Média de cartões do Santos',
+      'Média de cartões do Flamengo',
+
+    ],
+    datasets: [{
+      label: '',
+      data: [2.3, 2.4],
+      backgroundColor: [
+        '#000000',
+        '#EC2024',
+
+
+
+      ],
+      borderColor: ['grey'],
+      hoverOffset: 4
+    }]
+
+  };
+
+  var config_5 = {
+    type: 'pie',
+    data: data,
+    options: {
+      maintainAspectRatio: false
+    }
+  };
+
+  // Gráfico 06.
+  var config_6 = {
+    type: 'bar',
+    data: {
+      labels: ['Flamengo', 'Santos',],
+      datasets: [{
+        label: 'Méida de finalizações (no gol) ',
+        data: [10.3, 4.7	],
+        backgroundColor: [
+          '#EC2024',
+          '#000000',
+        ],
+        borderColor: [
+          'grey'
+        ],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
       }
-    };
+    }
+  }
 
 
 
-    var myChart = new Chart(ctx, config);
-    var myChart_2 = new Chart(ctx_2, config_2);
-    var myChart_4 = new Chart(ctx_4, config_4);
 
+  // Gráfico 08.
+
+  var data = {
+    labels: [
+      'Média de impedimentos por jogo(últimos 10 jogos)'
+    ],
+    datasets: [{
+      label: '',
+      data: [2.5, 3.3],
+      backgroundColor: [
+        '#000000',
+        '#EC2024',
+
+
+      ],
+      borderColor: ['grey'],
+      hoverOffset: 1
+    }]
+
+  };
+
+  var config_8 = {
+    type: 'doughnut',
+    data: data,
+    options: {
+      maintainAspectRatio: false
+    }
+  };
+
+
+
+  var myChart = new Chart(ctx, config);
+  var myChart_2 = new Chart(ctx_2, config_2);
+  var myChart_4 = new Chart(ctx_4, config_4);
+  var myChart_5=new Chart(ctx_5,config_5);
+  var myChart_6=new Chart(ctx_6,config_6);
+  var myChart_8=new Chart(ctx_8,config_8);
 </script>

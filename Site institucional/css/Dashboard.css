@@ -156,6 +156,12 @@ nav a {
     color: white
   
 }
+.Times #san{
+    color: white;
+}
+.Times #fla{
+    color: rgb(194, 0, 0);
+}
 .img_tim{
     margin-right: 10px;
     margin-left: 10px;
