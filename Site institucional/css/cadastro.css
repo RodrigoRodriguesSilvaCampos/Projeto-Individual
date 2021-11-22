@@ -114,13 +114,14 @@ a {
 
     margin-top: 30px;
     
-    background-color: yellow;
+    background-color: gold;
     color: white;
     height: 40px;
         width: 50%;
         cursor: pointer;
         font-size: 20px;
         transition: 1s;
+        font-weight: bold;
 }
 #btn_cad:hover {
     background-color: greenyellow;

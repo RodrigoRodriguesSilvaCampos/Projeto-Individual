@@ -73,82 +73,85 @@ body {
     color: yellow;
 }
 
-.banner {
-    background-size: cover;
+.centro{
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    margin-top: 160px;
-    margin-bottom: 160px;
+    
+    
 }
-
-.banner .formLogin {
+.centro .div_cadastro{
     background-color: white;
-    height: 350px;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 15px;
-}
-
-.banner .formLogin div {
-    display: flex;
-    flex-direction: column;
-}
-
-.banner .formLogin div span {
-    color: #3D3A39;
+    font-size: 30px;
+    margin-top: 100px;
     font-weight: bold;
-    font-size: .9rem;
+    width: 400px;
+    height: 300px;
+    
+    
+
+}
+#titulo_login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.div_cadastro img{
+    height: 50px;
+    display: flex;
+    margin: auto;
+}
+.div_cadastro .tech_login{
+    background-color: green;
+   
+}
+.ipt_login{
+    border: grey groove 3px;
+    border-radius: 5px;
+    height: 30px;
+}
+#tech_login{
+    color: white;
+}
+#bet_login{
+    color: yellow;
 }
 
-.banner .formLogin div input {
-    border:  2px solid #3D3A39;
-    border-radius: 10px;
-    padding: 10px;
-}
 
-.banner .formLogin button {
-    background-color: yellow;
+#btn_login {
+    background-color: gold;
     color: white;
     border: none;
     border-radius: 10px;
-    height: 40px;
-    width: 100px;
+    height: 30px;
+    width: 200px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 15px;
     transition: 1s;
+    margin-top: 30px;
+    font-weight: bold;
+}
+.corpo_log{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+
 }
 
-.banner .formLogin .conta {
-    color: #3D3A39;
-    font-weight: bold;
-    font-size: .9rem;
-    display: flex;
-    flex-direction: row;
+.itens_log{
     font-size: 15px;
 }
 
-.banner .formLogin .conta a {
-    text-decoration: none;
-    color: #3D3A39;
-    margin-left: 10px;
-}
-
-.banner .formLogin .login_reset {
-    text-decoration: none;
-    color: black;
-    margin-left: 10px;
-    font-weight: bolder;
-}
-
-.banner .formLogin button:hover{
+#btn_login:hover{
     background-color: greenyellow;
 
 }
 
+.div_newuser{
+    font-size: 12px;
+    margin-top: 5px;
+}
 .footer{
     display: flex;
     align-items: center;
