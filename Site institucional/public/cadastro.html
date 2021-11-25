@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnicalBET - Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="shortcut icon" href="imagens/favicon.png">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="conteiner">
+            
+            <div class="conteiner_02">
+                <h1>TECHNICAL</h1>
+                <h2>BET</h2>
+            </div>
+            <ul class="navbar">
+                <li><a href="Index.html">Menu</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li>|</li>
+                <li><a class="active" href="">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="conteiner_cadastro">
+        <h1>Cadastre-se Aqui!</h1>
+    <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+        Email:
+        <br>
+        <input name="email" class="ipt_cad" type="text" placeholder="example@email.com">
+        <br>
+        Senha:
+        <br>
+        <input name="senha" class="ipt_cad" type="password" placeholder="******">
+        <br>
+        Confirme sua Senha:
+        <br>
+        <input name="confirmacao-senha" class="ipt_cad" type="password" placeholder="******">
+        <br>
+        Nome Completo:
+        <br>
+        <input name="nome" class="ipt_cad" type="text" placeholder="Nome">
+        <br>
+        CPF:
+        <br>
+        <input name="cpf" class="ipt_cad" type="tex" placeholder="CPF">
+        <br>
+        <button class="btn">Cadastrar</button>
+    </form>
+    </div>
+    <div id="div_aguardar" class="loading-div">
+        <img src="./assets/circle-loading.gif" id="loading-gif">
+    </div>
+    <div class="footer">
+        
+        <p>Todos os direitos reservados ©TechnicalBET  2021</p>
+    </div>
+
+</body>
+</html>
+<script>
+
+    function limparFormulario() {
+        document.getElementById("form_cadastro").reset();
+    }
+
+    function cadastrar() {
+        aguardar();
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_cadastro")));
+
+        var nome = formulario.get("nome");
+        var email = formulario.get("email");
+        var senha = formulario.get("senha");
+        var confirmacaoSenha = formulario.get("confirmacao-senha");
+        var cpf = formulario.get("cpf");
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (nome == "" || email == "" || senha == "" || confirmacaoSenha == "" || cpf == "") {
+            
+            window.alert("Preencha todos os campos para prosseguir!");
+            if (nome == "")  {
+                console.log('nome está em branco')
+            }
+            if (email == "" )  {
+                console.log('email está em branco')
+            }
+            if (senha == "" )  {
+                console.log('senha está em branco')
+            }
+            if (confirmacaoSenha == "" )  {
+                console.log('confirmacaoSenha está em branco')
+            }
+            if (cpf == "" )  {
+                console.log('CPF está em branco')
+            }
+            finalizarAguardar();
+            return false;
+        }
+        
+        if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            finalizarAguardar();
+            return false;
+        }
+        
+        if (senha != confirmacaoSenha) {
+            window.alert("As senhas inseridas devem ser iguais para prosseguir!");
+            finalizarAguardar();
+            return false;
+        }
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "login.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+</script>

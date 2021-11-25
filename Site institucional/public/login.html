@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnicalBET - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="imagens/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Roboto&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="conteiner">
+
+            <div class="conteiner_02">
+                <h1>TECHNICAL</h1>
+                <h2>BET</h2>
+            </div>
+            <ul class="navbar">
+                <li><a href="Index.html">Menu</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li>|</li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a class="active" href="">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="centro">
+        <div class="div_cadastro">
+            <div class="tech_login">
+                <div id="titulo_login">
+                    <div id="tech_login">Technical </div>
+                    <div id="bet_login">BET</div>
+                    
+                </div>
+            </div>
+            <img src="imagens/icone.png" alt="">
+            <div class="corpo_log">
+                <form id="form_login" method="post" onsubmit="return entrar()">
+
+                <div class="itens_log"> E-mail</div>
+                <input class="ipt_login" type="text" name="email" placeholder="E-mail">
+                <div class="itens_log">Senha</div>
+                <input class="ipt_login" type="text" name="senha" placeholder="Senha">
+            </form>
+               <div class="div_newuser"> Novo usuário? <a href="cadastro.html">Crie uma conta</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+
+        <p>Todos os direitos reservados ©TechnicalBET 2021</p>
+    </div>
+
+</body>
+</html>
+<script>
+
+    function limparFormulario() {
+        document.getElementById("form_login").reset();
+    }
+
+    function entrar() {
+        aguardar();
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_login")));
+
+        var email = formulario.get("email");
+        var senha = formulario.get("senha");
+
+        console.log("FORM LOGIN: ", email);
+        console.log("FORM SENHA: ", senha);
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (email == "" || senha == "") {
+            window.alert("Preencha todos os campos para prosseguir!");
+            finalizarAguardar();
+            return false;
+        }
+
+        if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            finalizarAguardar();
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/dashboard.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+</script>
