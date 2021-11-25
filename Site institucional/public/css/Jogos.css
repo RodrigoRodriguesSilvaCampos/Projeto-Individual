@@ -7,9 +7,12 @@
      
 }
 body{
-   background: linear-gradient(#191A19,#1E5128,#4E9F3D,#D8E9A8);
+  /* background: linear-gradient(#191A19,#1E5128,#4E9F3D,#D8E9A8);
    width: 100%;
-   height: 100%;
+   height: 100%;*/
+   background-size: cover;
+   background-image: url('../Imagens/Grama_fut.jpg');
+   background-repeat: no-repeat;
 }
 
 .header{

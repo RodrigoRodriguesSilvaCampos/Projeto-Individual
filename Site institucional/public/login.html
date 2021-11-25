@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
-
+    <script src="./Imagens/js/login.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,6 +49,9 @@
                 <input class="ipt_login" type="text" name="email" placeholder="E-mail">
                 <div class="itens_log">Senha</div>
                 <input class="ipt_login" type="text" name="senha" placeholder="Senha">
+                <button id="btn_login" class="btn" type="submit">
+                    Entrar
+                </button>
             </form>
                <div class="div_newuser"> Novo usuário? <a href="cadastro.html">Crie uma conta</a></div>
             </div>
@@ -110,7 +113,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/dashboard.html";
+                        window.location = "/home.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

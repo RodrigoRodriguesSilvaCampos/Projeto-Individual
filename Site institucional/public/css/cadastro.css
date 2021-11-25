@@ -8,7 +8,10 @@
 }
  
 body {
-    background:linear-gradient(#191A19,#1E5128,#4E9F3D,#D8E9A8);
+    /*background:linear-gradient(#191A19,#1E5128,#4E9F3D,#D8E9A8);*/
+    background-image: url('../Imagens/Grama.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header{
@@ -110,17 +113,19 @@ a {
      
 }
 
-#form_cadastro .btn{
+#btn_cad{
 
-    margin-top: 30px;
     background-color: gold;
     color: white;
-    height: 40px;
-        width: 50%;
-        cursor: pointer;
-        font-size: 20px;
-        transition: 1s;
-        font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 180px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 1s;
+    margin-top: 30px;
+    font-weight: bold;
 }
 #form_cadastro .btn:hover {
     background-color: greenyellow;
