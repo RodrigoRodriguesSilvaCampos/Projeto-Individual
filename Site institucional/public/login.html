@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt">
-    <script src="./Imagens/js/login.js"></script>
+<html lang="pt-br">
+    
 <head>
+    <script src="./Imagens/js/funcoes.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechnicalBET - Login</title>
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="shortcut icon" href="imagens/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Roboto&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Evolve | Página Inicial</title>
+
+    <script src="./Imagens/js/login.js"></script>
+
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                 <div class="itens_log"> E-mail</div>
                 <input class="ipt_login" type="text" name="email" placeholder="E-mail">
                 <div class="itens_log">Senha</div>
-                <input class="ipt_login" type="text" name="senha" placeholder="Senha">
+                <input class="ipt_login" type="password" name="senha" placeholder="Senha">
                 <button id="btn_login" class="btn" type="submit">
                     Entrar
                 </button>
@@ -57,7 +57,9 @@
             </div>
         </div>
     </div>
-
+    <div id="div_aguardar" class="loading-div">
+        <img src="./Imagens/circle-loading.gif" id="loading-gif">
+    </div>
     <div class="footer">
 
         <p>Todos os direitos reservados ©TechnicalBET 2021</p>
@@ -72,7 +74,10 @@
     }
 
     function entrar() {
+        
+        
         aguardar();
+
 
         var formulario = new URLSearchParams(new FormData(document.getElementById("form_login")));
 
@@ -136,3 +141,5 @@
     }
 
 </script>
+
+

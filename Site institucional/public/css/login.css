@@ -161,6 +161,12 @@ body {
     font-size: 12px;
     margin-top: 5px;
 }
+#div_aguardar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   display: none;
+}
 .footer{
     display: flex;
     align-items: center;
