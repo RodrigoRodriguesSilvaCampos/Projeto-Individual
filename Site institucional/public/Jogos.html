@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Jogos.css">
+    <link rel="shortcut icon" href="./Imagens/favicon.png">
     <title>TechnicalBet-Jogos</title>
 </head>
 
@@ -93,10 +94,32 @@
     <div class="centro">
                 <h1>Quem será o campeão do Brasileirão? Descubra no nosso sorteio!</h1>     
     </div>
+    <div id="result_sort"></div>
     <div id="sorteio">
         <button onclick="sortear()">DESCUBRA O CAMPEÃO</button>
     </div> 
-    
+    <div class="resultado_sorteio" id="um"><img src="./Imagens/atletico-mineiro-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="dois"><img src="./Imagens/palmeiras-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="tres"><img src="./Imagens/flamengo-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="quatro"><img src="./Imagens/corinthians-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="cinco"><img src="./Imagens/fortaleza-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="seis"><img src="./Imagens/sao-paulo-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="sete"><img src="./Imagens/santos-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="oito"><img src="./Imagens/fluminense-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="nove"><img src="./Imagens/cuiaba-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="dez"><img src="./Imagens/gremio-logo-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="onze"><img src="./Imagens/bahia-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="doze"><img src="./Imagens/juventude-rs.png" alt=""></div>
+    <div class="resultado_sorteio" id="treze"><img src="./Imagens/atletico-paranaense-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="catorze"><img src="./Imagens/atletico-goianiense-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="quinze"><img src="./Imagens/sport-recife-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="dezeseis"><img src="./Imagens/america-mineiro-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="dezesete"><img src="./Imagens/red-bull-bragantino-capa.png" alt=""></div>
+    <div class="resultado_sorteio" id="dezoito"><img src="./Imagens/ceara-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="dezenove"><img src="./Imagens/chapecoense-capa.jpg" alt=""></div>
+    <div class="resultado_sorteio" id="vinte"><img src="./Imagens/internacional-capa.jpg" alt=""></div>
+    <div id="texto_sort"></div>
+
     <div class="footer">
 
         <p>Todos os direitos reservados ©TechnicalBET 2021</p>
@@ -108,6 +131,53 @@
 <script>
     function sortear() {
         var mth=Math.random();
+        var sorteio=(mth*19+1).toFixed(0);
+      
+        if (sorteio==1) {
+            texto_sort.innerHTML=`O Atlético Mineiro Será o Campeão Brasileiro!`
+            
+        } if (sorteio==2) {
+            texto_sort.innerHTML=`O Palmeiras será o Campeão Brasileiro!`
+        } if (sorteio==3) {
+            texto_sort.innerHTML=`O Flamengo será o Campeão Brasileiro!`
+        } if (sorteio==4) {
+            texto_sort.innerHTML=`O Corinthians será o Campeão Brasileiro!`
+        } if (sorteio==5) {
+            texto_sort.innerHTML=`O Fortaleza será o Campeão Brasileiro!`
+        } if (sorteio==6) {
+            texto_sort.innerHTML=`O São Paulo será o Campeão Brasileiro!`
+        } if (sorteio==7) {
+            texto_sort.innerHTML=`O Santos será o Campeão Brasileiro!`
+        } if (sorteio==8) {
+            texto_sort.innerHTML=`O Fluminense será o Campeão Brasileiro`
+        } if (sorteio==9) {
+            texto_sort.innerHTML=`O Cuiabá será o Campeão Brasileiro!`
+        } if (sorteio==10) {
+            texto_sort.innerHTML=`O Grêmio será o Campeão Brasileiro!`
+        } if (sorteio==11) {
+            texto_sort.innerHTML=`O Bahia será o Campeão Brasileiro!`
+        } if (sorteio==12) {
+            texto_sort.innerHTML=`O Juventude será o Campeão Brasileiro!`
+        } if (sorteio==13) {
+            texto_sort.innerHTML=`O Athletico Paranaense será o Campeão Brasileiro!`
+        } if (sorteio==14) {
+            texto_sort.innerHTML=`O Atlético Goianiense será o Campeão Brasileiro!`
+        } if (sorteio==15) {
+            texto_sort.innerHTML=`O Sport será o Campeão Brasileiro!`
+        } if (sorteio==16) {
+            texto_sort.innerHTML=`O América-MG será o Campeão Brasileiro!`
+        } if (sorteio==17) {
+            texto_sort.innerHTML=`O Red Bull Bragantino será o Campeão Brasileiro!`
+        } if (sorteio==18) {
+            texto_sort.innerHTML=`O Ceará será o Campeão Brasileiro!`
+        } if (sorteio==19) {
+            texto_sort.innerHTML=`A chapecoense  será o time Campeão Brasileiro!`
+        }
+        if (sorteio==20) {
+            texto_sort.innerHTML=`O Internacional será o Campeão Brasileiro!`
+            
+        }
+       
         
         
     }
