@@ -8,7 +8,12 @@
 }
  
 body {
-    background:linear-gradient(#191A19,#1E5128,#4E9F3D,#D8E9A8);
+    /* background:linear-gradient(#191A19,#1E5128,#4E9F3D,#D8E9A8); */
+   
+    background-image: url('../imagens/StadiumHome.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
 }
 
 .header{
@@ -85,7 +90,7 @@ body {
 .corpo .conteiner_inicio{
     margin-top: 100px;
     margin-bottom: 3%;
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
    width: 1000px;
     
     display: flex;
@@ -94,7 +99,7 @@ body {
     align-items: center;
     border-radius: 10px;
      font-size: medium;
-    color: rgb(0, 0, 0);
+    color: white;
     box-shadow: rgb(0, 0, 0) 5px 5px 10px;
 }
 
@@ -115,7 +120,7 @@ body {
 .texto1{
     
     width: 60%;
-    text-align: justify;
+    
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 15px;

@@ -5,7 +5,7 @@
 }
 
 body {
-    background:linear-gradient(#191A19,#1E5128,#4E9F3D,#D8E9A8);
+    background:linear-gradient(#191A19,#1E5128,#4E9F3D);
 }
 
 .header{
@@ -103,33 +103,35 @@ nav a {
     text-decoration: none;
 }
 
-.link {
-    background-color: #494950;
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-    transform: all .2s linear;
-    color: white;
-    border-bottom: 2px solid #222;
-    opacity: 0;
-    margin-top: 200px;
+.aviso_aposta{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
+    text-align: justify;
+}
+.aviso_aposta h1{
+    color: red;
+}
+.aviso_aposta h3{
+    color: rgb(194, 0, 0);
+}
+.dicas_aposta{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 1000px;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 20px;
+    text-align: justify;
+    color: black;
+    font-weight: bold;
+   
 }
 
-.link:hover {
-    background-color: #050542;
-
-}
-
-#check:checked ~ .barra {
-    transform: translateX(300px);
-}
-
-#check:checked ~ .barra nav a .link{
-    opacity: 1;
-    margin-top: 0;
-    transition-delay: .2s;
-
-}
 
 .graficos {
     width: 90%;
@@ -240,6 +242,7 @@ nav a {
   margin-bottom: 5px;
   margin-top: 15px;
 }
+
 
 .footer{
     display: flex;

@@ -74,9 +74,7 @@ body {
 
 
 
-img {
-    width: 40px;
-}
+
 
 #icone {
     cursor: pointer;
@@ -104,10 +102,69 @@ nav a {
     text-decoration: none;
 }
 
+.subtitle{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin: auto;
+    color: greenyellow;
+    background-color: black;
+    border: solid white 2px;
+    border-radius: 15px;
+    height: 50px;
+    width: 20%;
+    margin-top: 30px;
+}
 
 
+.graphics{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 50px;
+   align-items: center;
+    border-radius: 15px;
+    border: solid white 2px;
+    width: 30%;
+    height: 50px;
+    background-color: black;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+}
+.graphics a{
+    text-decoration: none;
+    color: yellowgreen;
+    font-weight: bolder;
+   
+}
+.icones{
+    flex-direction: row;
+    display: flex;
+}
 
+.Games{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 50px;
+   align-items: center;
+    border-radius: 15px;
+    border: solid white 2px;
+    width: 30%;
+    height: 50px;
+    background-color: black;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
 
+}
+.Games a{
+    text-decoration: none;
+    color: yellowgreen;
+    font-weight: bolder;
+}
 
 
 
@@ -116,12 +173,12 @@ nav a {
     text-align: center;
     margin: auto;
     margin-top: 50px;
-    margin-left: 39%;
+  
     border-radius: 15px;
-    border: solid black;
+    border: solid white 2px;
     width: 30%;
     height: 50px;
-    background-color: #F8F8FF;
+    background-color: black;
 }
 
 .titulo h1 {
@@ -138,7 +195,8 @@ nav a {
     height: 110px;
     position: static;
     width: auto;
-    margin-top: 300px;
+    margin-top: 200px;
+   
 }
 
 .footer p{
