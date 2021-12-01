@@ -5,7 +5,11 @@
 }
 
 body {
-    background:linear-gradient(#191A19,#1E5128,#4E9F3D);
+    /* background:linear-gradient(#191A19,#1E5128,#4E9F3D); */
+    background-image: url('../imagens/Bola_Brasil.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header{
@@ -111,6 +115,10 @@ nav a {
     width: 500px;
     margin: auto;
     text-align: justify;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 50px;
 }
 .aviso_aposta h1{
     color: red;
@@ -122,16 +130,25 @@ nav a {
     display: flex;
     align-items: center;
     margin: auto;
-    width: 1000px;
+    width: 500px;
     justify-content: center;
     flex-direction: row;
     margin-top: 20px;
     text-align: justify;
-    color: black;
+    color: greenyellow;
     font-weight: bold;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid white 1px;
+    
+    
    
 }
-
+.div_ajuste{
+    display: flex;
+    flex-direction: row;
+}
 
 .graficos {
     width: 90%;
@@ -242,7 +259,6 @@ nav a {
   margin-bottom: 5px;
   margin-top: 15px;
 }
-
 
 .footer{
     display: flex;
