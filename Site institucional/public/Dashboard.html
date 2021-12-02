@@ -1,345 +1,316 @@
 <!DOCTYPE html>
 <html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechnicalBET - Dashboard</title>
+    <link rel="stylesheet" href="css/Dashboard.css" />
+    <link rel="shortcut icon" href="./Imagens/favicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechnicalBET - Dashboard</title>
-  <link rel="stylesheet" href="css/Dashboard.css">
-  <link rel="shortcut icon" href="./Imagens/favicon.png">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-
-<body>
-
-  <div class="header">
-    <div class="conteiner">
-
-      <div class="conteiner_02">
-        <h1>TECHNICAL</h1>
-        <h2>BET</h2>
+  <body>
+    <div class="header">
+      <div class="conteiner">
+        <div class="conteiner_02">
+          <h1>TECHNICAL</h1>
+          <h2>BET</h2>
+        </div>
+        <ul class="navbar">
+          <li><a href="Home.html">Menu</a></li>
+          <li>|</li>
+          <li><a href="Jogos.html">Jogos</a></li>
+          <li><a class="active" href="Dashboard.html">Gráficos</a></li>
+          <li><a href="Index.html">Sair</a></li>
+        </ul>
       </div>
-      <ul class="navbar">
-        <li><a href="Home.html">Menu</a></li>
-        <li>|</li>
-        <li><a href="Jogos.html">Jogos</a></li>
-        <li><a class="active" href="Dashboard.html">Gráficos</a></li>
-        <li><a href="Index.html">Sair</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="Times">
-    <h1 id="co">Corinthians</h1><img class="img_tim" src="imagens/corinthians.png">
-    <h2>X</h2>
-    <img class="img_tim" src="imagens/gremio.png">
-    <h1 id="gr">Grêmio</h1>
-  </div>
-
-
-
-  <div class="graficos">
-    <div class="nav_bar_01">
-      <div class="bar_graficos"><canvas id="chartline" style="width: 100%; height: 100%;"></canvas></div>
-      <div class="bar_graficos"><canvas id="chartline_2" style="width: 100%; height: 100%;"></canvas></div>
     </div>
 
-    <div class="nav_bar_02">
-      <div class="bar_graficos">
-        <div class="graph">
-          <h1>Histórico de Jogos no Campeonato Brasileiro</h1>
-          <div class="box red">
-            <h1>29</h1>
-            <h3>Vitórias</h3>
-            <p>Grêmio</p>
-            <img src="imagens/gremio.png">
-          </div>
-          <div class="box yellow">
-            <h1>13</h1>
-            <h3>Empates</h3>
-            <p>Quant.</p>
-          </div>
-          <div class="box green">
-            <h1>25</h1>
-            <h3>Vitórias</h3>
-            <p>Corinthians</p>
-            <img src="imagens/corinthians.png">
-          </div>
+    <div class="Times">
+      <h1 id="co">Corinthians</h1>
+      <img class="img_tim" src="imagens/corinthians.png" />
+      <h2>X</h2>
+      <img class="img_tim" src="imagens/gremio.png" />
+      <h1 id="gr">Grêmio</h1>
+    </div>
+
+    <div class="graficos">
+      <div class="nav_bar_01">
+        <div class="bar_graficos">
+          <canvas id="chartline" style="width: 100%; height: 100%"></canvas>
+        </div>
+        <div class="bar_graficos">
+          <canvas id="chartline_2" style="width: 100%; height: 100%"></canvas>
         </div>
       </div>
-      <div class="bar_graficos"><canvas id="chartline_4" style="width: 100%; height: 100%;"></canvas></div>
 
-    </div>
-
-  </div>
-  <div class="Times">
-    <h1 id="fla">Flamengo</h1><img class="img_tim" src="imagens/flamengo.png">
-    <h2>X</h2>
-    <img class="img_tim" src="imagens/Santos.png">
-    <h1 id="san">Santos</h1>
-  </div>
-
-
-
-  <div class="graficos">
-    <div class="nav_bar_01">
-      <div class="bar_graficos"><canvas id="chartline_5" style="width: 100%; height: 100%;"></canvas></div>
-      <div class="bar_graficos"><canvas id="chartline_6" style="width: 100%; height: 100%;"></canvas></div>
-    </div>
-
-    <div class="nav_bar_02">
-      <div class="bar_graficos">
-        <div class="graph">
-          <h1>Histórico de Jogos no Campeonato Brasileiro</h1>
-          <div class="box red">
-            <h1>28</h1>
-            <h3>Vitórias</h3>
-            <p>Flamengo</p>
-            <img src="imagens/flamengo.png">
-          </div>
-          <div class="box yellow">
-            <h1>22</h1>
-            <h3>Empates</h3>
-            <p>Quant.</p>
-          </div>
-          <div class="box green">
-            <h1>21</h1>
-            <h3>Vitórias</h3>
-            <p>Santos</p>
-            <img src="imagens/Santos.png">
+      <div class="nav_bar_02">
+        <div class="bar_graficos">
+          <div class="graph">
+            <h1>Histórico de Jogos no Campeonato Brasileiro</h1>
+            <div class="box red">
+              <h1>29</h1>
+              <h3>Vitórias</h3>
+              <p>Grêmio</p>
+              <img src="imagens/gremio.png" />
+            </div>
+            <div class="box yellow">
+              <h1>13</h1>
+              <h3>Empates</h3>
+              <p>Quant.</p>
+            </div>
+            <div class="box green">
+              <h1>25</h1>
+              <h3>Vitórias</h3>
+              <p>Corinthians</p>
+              <img src="imagens/corinthians.png" />
+            </div>
           </div>
         </div>
+        <div class="bar_graficos">
+          <canvas id="chartline_4" style="width: 100%; height: 100%"></canvas>
+        </div>
       </div>
-      <div class="bar_graficos"><canvas id="chartline_8" style="width: 100%; height: 100%;"></canvas></div>
-
+    </div>
+    <div class="Times">
+      <h1 id="fla">Flamengo</h1>
+      <img class="img_tim" src="imagens/flamengo.png" />
+      <h2>X</h2>
+      <img class="img_tim" src="imagens/Santos.png" />
+      <h1 id="san">Santos</h1>
     </div>
 
-  </div>
+    <div class="graficos">
+      <div class="nav_bar_01">
+        <div class="bar_graficos">
+          <canvas id="chartline_5" style="width: 100%; height: 100%"></canvas>
+        </div>
+        <div class="bar_graficos">
+          <canvas id="chartline_6" style="width: 100%; height: 100%"></canvas>
+        </div>
+      </div>
 
-  <div class="aviso_aposta">
-    <img src="./Imagens/Icone_aviso.png" alt="">
-    <h1>Aviso!</h1>
-    <h3>As apostas passadas A seguir serão somente dicas de possíveis resultados que poderão acontecer nos respectivos
-      jogos. A TechnicalBET não irá se responsabilizar por apostas feitas com estas dicas.</h3>
-  </div>
-  <div class="div_ajuste">
-    <div class="dicas_aposta">
-      No jogo Corinthians e Grêmio,
-      Aposte no Corinthians,Com mais de 1,5 gols na partida. Caso queira aumentar um pouco mais os seus odds,
-      Aposte no gol do roger guedes ou Gustavo Mosquito,Do outro time caso queira apostar em algum jogador,Aposte no
-      ferreirinha ou Diego Souza.
+      <div class="nav_bar_02">
+        <div class="bar_graficos">
+          <div class="graph">
+            <h1>Histórico de Jogos no Campeonato Brasileiro</h1>
+            <div class="box red">
+              <h1>28</h1>
+              <h3>Vitórias</h3>
+              <p>Flamengo</p>
+              <img src="imagens/flamengo.png" />
+            </div>
+            <div class="box yellow">
+              <h1>22</h1>
+              <h3>Empates</h3>
+              <p>Quant.</p>
+            </div>
+            <div class="box green">
+              <h1>21</h1>
+              <h3>Vitórias</h3>
+              <p>Santos</p>
+              <img src="imagens/Santos.png" />
+            </div>
+          </div>
+        </div>
+        <div class="bar_graficos">
+          <canvas id="chartline_8" style="width: 100%; height: 100%"></canvas>
+        </div>
+      </div>
     </div>
-    <div class="dicas_aposta">
-      No jogo Flamengo e Santos,Aposte no Flamengo, com mais de 2,5 gols na partida.Caso queira aumentar um pouco mais
-      os seus odds,Aposte no gol do Gabigol,Marinho ou Bruno Henrique,Principais goleadores dos respectivos times.
+
+    <div class="aviso_aposta">
+      <img src="./Imagens/Icone_aviso.png" alt="" />
+      <h1>Aviso!</h1>
+      <h3>
+        As apostas passadas A seguir serão somente dicas de possíveis resultados
+        que poderão acontecer nos respectivos jogos. A TechnicalBET não irá se
+        responsabilizar por apostas feitas com estas dicas.
+      </h3>
     </div>
-  </div>
-  <div class="sorteio_jog">
-    <h3>Caso não saiba qual jogador escolher, Aperte no nosso botão para sortear um
-      jogador!</h3>
-  </div>
-  <div class="div_ajuste">
-    <div class="space_buttons">
-      <button id="btn_corgrem" class="botoes_sorteio" onclick="CorGrem()">Sorteio Corinthians e Grêmio</button>
-      <button id="btn_flasan" class="botoes_sorteio" onclick="FlaSan()">Sorteio Flamengo e Santos</button>
+    <div class="div_ajuste">
+      <div class="dicas_aposta">
+        No jogo Corinthians e Grêmio, Aposte no Corinthians,Com mais de 1,5 gols
+        na partida. Caso queira aumentar um pouco mais os seus odds, Aposte no
+        gol do roger guedes ou Gustavo Mosquito,Do outro time caso queira
+        apostar em algum jogador,Aposte no ferreirinha ou Diego Souza.
+      </div>
+      <div class="dicas_aposta">
+        No jogo Flamengo e Santos,Aposte no Flamengo, com mais de 2,5 gols na
+        partida.Caso queira aumentar um pouco mais os seus odds,Aposte no gol do
+        Gabigol,Marinho ou Bruno Henrique,Principais goleadores dos respectivos
+        times.
+      </div>
     </div>
-  </div>
-
-  <div class="footer">
-
-    <p>Todos os direitos reservados ©TechnicalBET 2021</p>
-  </div>
-</body>
-
+    <div class="sorteio_jog">
+      <h3>
+        Caso não saiba qual jogador escolher, Aperte no nosso botão para sortear
+        um jogador!
+      </h3>
+    </div>
+    <div class="div_ajuste">
+      <div class="space_buttons">
+        <button id="btn_corgrem" class="botoes_sorteio" onclick="CorGrem()">
+          Sorteio Corinthians e Grêmio
+        </button>
+        <button id="btn_flasan" class="botoes_sorteio" onclick="FlaSan()">
+          Sorteio Flamengo e Santos
+        </button>
+      </div>
+    </div>
+    <div class="alinha_imagens">
+      <img id="resultadoCG" />
+      <img id="resultadoFS" />
+    </div>
+    <div class="footer">
+      <p>Todos os direitos reservados ©TechnicalBET 2021</p>
+    </div>
+  </body>
 </html>
 <script>
-  var ctx = document.getElementById('chartline').getContext('2d');
-  var ctx_2 = document.getElementById('chartline_2').getContext('2d');
-  var ctx_4 = document.getElementById('chartline_4').getContext('2d');
-  var ctx_5 = document.getElementById('chartline_5').getContext('2d');
-  var ctx_6 = document.getElementById('chartline_6').getContext('2d');
-  var ctx_8 = document.getElementById('chartline_8').getContext('2d');
+  var ctx = document.getElementById("chartline").getContext("2d");
+  var ctx_2 = document.getElementById("chartline_2").getContext("2d");
+  var ctx_4 = document.getElementById("chartline_4").getContext("2d");
+  var ctx_5 = document.getElementById("chartline_5").getContext("2d");
+  var ctx_6 = document.getElementById("chartline_6").getContext("2d");
+  var ctx_8 = document.getElementById("chartline_8").getContext("2d");
   // Gráfico 01.
   var data = {
-    labels: [
-      'Média de cartões do Corinthians',
-      'Média de cartões do grêmio',
-
+    labels: ["Média de cartões do Corinthians", "Média de cartões do grêmio"],
+    datasets: [
+      {
+        label: "",
+        data: [1.64, 3],
+        backgroundColor: ["#000000", "#1481BF"],
+        borderColor: ["grey"],
+        hoverOffset: 4,
+      },
     ],
-    datasets: [{
-      label: '',
-      data: [1.64, 3],
-      backgroundColor: [
-        '#000000',
-        '#1481BF',
-
-
-
-      ],
-      borderColor: ['grey'],
-      hoverOffset: 4
-    }]
-
   };
 
   var config = {
-    type: 'pie',
+    type: "pie",
     data: data,
     options: {
-      maintainAspectRatio: false
-    }
+      maintainAspectRatio: false,
+    },
   };
 
   // Gráfico 02.
   var config_2 = {
-    type: 'bar',
+    type: "bar",
     data: {
-      labels: ['Corinthians', 'Grêmio',],
-      datasets: [{
-        label: 'Méida de finalizações (no gol) ',
-        data: [9.81, 4],
-        backgroundColor: [
-          '#000000',
-          '#1481BF',
-        ],
-        borderColor: [
-          'grey'
-        ],
-        borderWidth: 2
-      }]
+      labels: ["Corinthians", "Grêmio"],
+      datasets: [
+        {
+          label: "Méida de finalizações (no gol) ",
+          data: [9.81, 4],
+          backgroundColor: ["#000000", "#1481BF"],
+          borderColor: ["grey"],
+          borderWidth: 2,
+        },
+      ],
     },
     options: {
       scales: {
         y: {
-          beginAtZero: true
-        }
-      }
-    }
-  }
-
-
-
+          beginAtZero: true,
+        },
+      },
+    },
+  };
 
   // Gráfico 04.
 
   var data = {
-    labels: [
-      'Média de impedimentos por jogo(últimos 10 jogos)'
+    labels: ["Média de impedimentos por jogo(últimos 10 jogos)"],
+    datasets: [
+      {
+        label: "",
+        data: [1.4, 0.7],
+        backgroundColor: ["#000000", "#1481BF"],
+        borderColor: ["grey"],
+        hoverOffset: 1,
+      },
     ],
-    datasets: [{
-      label: '',
-      data: [1.4, 0.7],
-      backgroundColor: [
-        '#000000',
-        '#1481BF',
-
-
-      ],
-      borderColor: ['grey'],
-      hoverOffset: 1
-    }]
-
   };
 
   var config_4 = {
-    type: 'doughnut',
+    type: "doughnut",
     data: data,
     options: {
-      maintainAspectRatio: false
-    }
+      maintainAspectRatio: false,
+    },
   };
   // Gráfico 05.
   var data = {
-    labels: [
-      'Média de cartões do Santos',
-      'Média de cartões do Flamengo',
-
+    labels: ["Média de cartões do Santos", "Média de cartões do Flamengo"],
+    datasets: [
+      {
+        label: "",
+        data: [2.3, 2.4],
+        backgroundColor: ["#000000", "#EC2024"],
+        borderColor: ["grey"],
+        hoverOffset: 4,
+      },
     ],
-    datasets: [{
-      label: '',
-      data: [2.3, 2.4],
-      backgroundColor: [
-        '#000000',
-        '#EC2024',
-
-
-
-      ],
-      borderColor: ['grey'],
-      hoverOffset: 4
-    }]
-
   };
 
   var config_5 = {
-    type: 'pie',
+    type: "pie",
     data: data,
     options: {
-      maintainAspectRatio: false
-    }
+      maintainAspectRatio: false,
+    },
   };
 
   // Gráfico 06.
   var config_6 = {
-    type: 'bar',
+    type: "bar",
     data: {
-      labels: ['Flamengo', 'Santos',],
-      datasets: [{
-        label: 'Méida de finalizações (no gol) ',
-        data: [10.3, 4.7],
-        backgroundColor: [
-          '#EC2024',
-          '#000000',
-        ],
-        borderColor: [
-          'grey'
-        ],
-        borderWidth: 2
-      }]
+      labels: ["Flamengo", "Santos"],
+      datasets: [
+        {
+          label: "Méida de finalizações (no gol) ",
+          data: [10.3, 4.7],
+          backgroundColor: ["#EC2024", "#000000"],
+          borderColor: ["grey"],
+          borderWidth: 2,
+        },
+      ],
     },
     options: {
       scales: {
         y: {
-          beginAtZero: true
-        }
-      }
-    }
-  }
-
-
-
+          beginAtZero: true,
+        },
+      },
+    },
+  };
 
   // Gráfico 08.
 
   var data = {
-    labels: [
-      'Média de impedimentos por jogo(últimos 10 jogos)'
+    labels: ["Média de impedimentos por jogo(últimos 10 jogos)"],
+    datasets: [
+      {
+        label: "",
+        data: [2.5, 3.3],
+        backgroundColor: ["#000000", "#EC2024"],
+        borderColor: ["grey"],
+        hoverOffset: 1,
+      },
     ],
-    datasets: [{
-      label: '',
-      data: [2.5, 3.3],
-      backgroundColor: [
-        '#000000',
-        '#EC2024',
-
-
-      ],
-      borderColor: ['grey'],
-      hoverOffset: 1
-    }]
-
   };
 
   var config_8 = {
-    type: 'doughnut',
+    type: "doughnut",
     data: data,
     options: {
-      maintainAspectRatio: false
-    }
+      maintainAspectRatio: false,
+    },
   };
-
-
 
   var myChart = new Chart(ctx, config);
   var myChart_2 = new Chart(ctx_2, config_2);
@@ -347,22 +318,49 @@
   var myChart_5 = new Chart(ctx_5, config_5);
   var myChart_6 = new Chart(ctx_6, config_6);
   var myChart_8 = new Chart(ctx_8, config_8);
+  var vetorCG = [
+    "./Imagens/RG.png",
+    "./Imagens/Mosquito.png",
+    "./Imagens/Ferreira.png",
+    "./Imagens/Diego.png",
+  ];
+  var vetorFS = [
+    "./Imagens/BH.png",
+    "./Imagens/Gabigol.png",
+    "./Imagens/marinho3.png",
+  ];
   function CorGrem() {
-    var mthCG=Math.random()
-    var sorteioCG=mthCG *3+1;
-    for (let index = 0; index < array.length; index++) {
-      
-      
+    var mthCG = Math.random();
+    var sorteioCG = (mthCG * 3 + 1).toFixed(0);
+    for (let index = 0; index < vetorCG.length; index++) {
+      resultadoCG.src = vetorCG[sorteioCG - 1];
     }
-    
+    // if (sorteioCG==1) {
+    //   resultadoCG.src=vetor[0]
+    // }
+    // if (sorteioCG==2) {
+    //   resultadoCG.src=vetor[1]
+
+    // }
+    // if (sorteioCG==3) {
+    //   resultadoCG.src=vetor[2]
+    // }
+    //   if (sorteioCG==4) {
+    //     resultadoCG.src=vetor[3]
+    //   }
   }
   function FlaSan() {
-    var mthFS=Math.random()
-    var sorteioFS=mthFS *2+1;
-    
-    for (let index = 0; index < array.length; index++) {
-      
-      
+    var mthFS = Math.random();
+    var sorteioFS = (mthFS * 2 + 1).toFixed(0);
+    for (let index = 0; index < sorteioFS.length; index++) {
+      resultadoFS.src = vetorFS[sorteioFS - 1];
     }
   }
 </script>
+<!-- <img class="imgs_sorteio" id="roger" src="./Imagens/RG.png" >
+<img class="imgs_sorteio" id="bruno"  src="./Imagens/BH.png" >
+<img class="imgs_sorteio" id="gabi" src="./Imagens/Gabigol.png" >
+<img class="imgs_sorteio" id="diego" src="./Imagens/Diego.png" >
+<img class="imgs_sorteio" id="ferreirinha" src="./Imagens/Ferreira.png" >
+<img class="imgs_sorteio" id="marinho" src="./Imagens/marinho3.png" >
+<img class="imgs_sorteio" id="mosquito" src="./Imagens/Mosquito.png" > -->

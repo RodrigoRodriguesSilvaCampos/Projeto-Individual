@@ -53,9 +53,7 @@ cursor: pointer;
     background-color: white;
     transition: 1s
 }
-#btn_flasan{
 
-}
 .conteiner{
     width: 95%;
     height: 100%;
@@ -66,7 +64,25 @@ cursor: pointer;
 .conteiner_02{
     width: 70%;
 }
-
+#resultadoCG{
+    height: 300px;
+    width: 200px;
+    margin-left: 475px;
+    margin-top:30px;
+    border: none;
+}
+#resultadoFS{
+    height: 300px;
+    width: 200px;
+   margin-left: 50px;
+    margin-top:30px;
+    border: none;
+    
+}
+.alinha_imagens{
+    display: flex;
+    flex-direction: row;
+}
 .header .conteiner{
     display: flex;
     flex-direction: row;
