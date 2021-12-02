@@ -26,9 +26,14 @@ function cadastrar(nome, email, senha, cpf) {
     console.log("Executando a instrução SQL: \n"+instrucao);
     return database.executar(instrucao);
 }
+function contagem(){
+    var instrucao = `select count(idCadastro) as contador from cadastro;`
+    return database.executar(instrucao);
+}
 
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    contagem,
 };

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/analytics.css">
+    <link rel="shortcut icon" href="./Imagens/favicon.png">
+    <title>TechnicalBET-Analytics</title>
+</head>
+<body >
+    <div class="header">
+        <div class="conteiner">
+
+            <div class="conteiner_02">
+                <h1>TECHNICAL</h1>
+                <h2>BET</h2>
+            </div>
+            <ul class="navbar">
+                <li><a  href="Home.html">Menu</li>
+                <li>|</li>
+                <li><a href="Jogos.html">Jogos</a></li>
+                <li><a href="Dashboard.html">Gráficos</a></li>
+                <li><a href="Index.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="agradecimento"><h2>Muito Obrigado a você que se cadastrou em nosso site!Aperte no botão e veja
+        quantas pessoas confiam em nosso trabalho.</h2>
+    </div>
+    <div class="alinha_btn">
+    <button id="btn_ana" onclick="exibir_metrica()"><h3>Exibir Cadastrados</h3></button><br>
+</div>
+<div class="div_aligntext">
+    <div id="texto"></div>
+</div>
+</body>
+</html>
+<script>
+     function exibir_metrica() {
+
+fetch("/usuarios/contagem", {
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  method: 'GET'
+})
+  .then(function (resposta) {
+    resposta.json()
+      .then(function (res) {
+          texto.innerHTML = res[0].contador
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      })
+  })
+  .catch(function (erro) {
+    console.log(erro);
+  })
+
+}
+</script>

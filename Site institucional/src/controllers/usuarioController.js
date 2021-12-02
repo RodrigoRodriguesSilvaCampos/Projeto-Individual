@@ -89,10 +89,26 @@ function cadastrar(req, res) {
         );
     }
 }
+function contagem(req, res) {
+    usuarioModel.contagem().then(function (resultado) {
+        return res.json(resultado) }).catch
+        (
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+
+}
 
 module.exports = {
     entrar,
     cadastrar,
     listar,   
-    testar
+    testar,
+    contagem
 }
