@@ -321,19 +321,20 @@
   var vetorCG = [
     "./Imagens/RG.png",
     "./Imagens/Mosquito.png",
-    "./Imagens/Ferreira.png",
+    "./Imagens/Ferreirinha.png",
     "./Imagens/Diego.png",
   ];
   var vetorFS = [
     "./Imagens/BH.png",
     "./Imagens/Gabigol.png",
-    "./Imagens/marinho3.png",
+    "./Imagens/Marinho_San.png",
   ];
   function CorGrem() {
     var mthCG = Math.random();
     var sorteioCG = (mthCG * 3 + 1).toFixed(0);
     for (let index = 0; index < vetorCG.length; index++) {
       resultadoCG.src = vetorCG[sorteioCG - 1];
+      resultadoCG.style.display='block'
     }
     // if (sorteioCG==1) {
     //   resultadoCG.src=vetor[0]
@@ -354,6 +355,7 @@
     var sorteioFS = (mthFS * 2 + 1).toFixed(0);
     for (let index = 0; index < sorteioFS.length; index++) {
       resultadoFS.src = vetorFS[sorteioFS - 1];
+      resultadoFS.style.display='block'
     }
   }
 </script>
