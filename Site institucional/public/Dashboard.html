@@ -127,14 +127,24 @@
     <div class="dicas_aposta">
       No jogo Corinthians e Grêmio,
       Aposte no Corinthians,Com mais de 1,5 gols na partida. Caso queira aumentar um pouco mais os seus odds,
-      Aposte no gol do roger guedes ou Gustavo Mosquito,Do outro time caso queira apostar em algum jogador,Aposte no ferreirinha ou Diego Souza.
+      Aposte no gol do roger guedes ou Gustavo Mosquito,Do outro time caso queira apostar em algum jogador,Aposte no
+      ferreirinha ou Diego Souza.
     </div>
     <div class="dicas_aposta">
       No jogo Flamengo e Santos,Aposte no Flamengo, com mais de 2,5 gols na partida.Caso queira aumentar um pouco mais
       os seus odds,Aposte no gol do Gabigol,Marinho ou Bruno Henrique,Principais goleadores dos respectivos times.
     </div>
   </div>
-
+  <div class="sorteio_jog">
+    <h3>Caso não saiba qual jogador escolher, Aperte no nosso botão para sortear um
+      jogador!</h3>
+  </div>
+  <div class="div_ajuste">
+    <div class="space_buttons">
+      <button id="btn_corgrem" class="botoes_sorteio" onclick="CorGrem()">Sorteio Corinthians e Grêmio</button>
+      <button id="btn_flasan" class="botoes_sorteio" onclick="FlaSan()">Sorteio Flamengo e Santos</button>
+    </div>
+  </div>
 
   <div class="footer">
 
@@ -337,4 +347,21 @@
   var myChart_5 = new Chart(ctx_5, config_5);
   var myChart_6 = new Chart(ctx_6, config_6);
   var myChart_8 = new Chart(ctx_8, config_8);
+  function CorGrem() {
+    var mthCG=Math.random()
+    var sorteioCG=mthCG *3+1;
+    for (let index = 0; index < array.length; index++) {
+      
+      
+    }
+    
+  }
+  function FlaSan() {
+    var mthFS=Math.random()
+    var sorteioFS=mthFS *2+1;
+    for (let index = 0; index < array.length; index++) {
+      
+      
+    }
+  }
 </script>

@@ -19,7 +19,43 @@ body {
     
     
 }
+.botoes_sorteio{
+    display: flex;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    border: solid black 1px;
+    border-radius: 10px;
 
+}
+#btn_corgrem{
+background-color: aquamarine;
+cursor: pointer;
+
+}
+#btn_flasan{
+    background-color: rgb(194, 0, 0);
+    cursor: pointer;
+
+}
+#btn_flasan:hover{
+    color: black;
+    transition: 1s;
+    background-color: white;
+
+}
+#btn_corgrem:hover{
+    color: black;
+    background-color: white;
+    transition: 1s
+}
+#btn_flasan{
+
+}
 .conteiner{
     width: 95%;
     height: 100%;
@@ -148,6 +184,7 @@ nav a {
 .div_ajuste{
     display: flex;
     flex-direction: row;
+    
 }
 
 .graficos {
@@ -191,7 +228,28 @@ nav a {
     font-size: 20px; /*adaptar ao elemento root (a tela)*/
     color: greenyellow;
 }
-
+.sorteio_jog{
+    color: white;
+    background-color: black;
+    border: solid white 1px;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 10px;
+    margin-top: 30px;
+    font-weight: bold;
+   
+}
+.space_buttons{
+   
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    
+}
 .graficos .nav_bar_01 {
     display: flex;
 }
